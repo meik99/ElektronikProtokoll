@@ -9,6 +9,36 @@
 \usepackage[backend=biber]{biblatex}
 \usepackage{csquotes}
 \usepackage{changepage}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{code}{
+backgroundcolor=\color{backcolour},
+commentstyle=\color{codegreen},
+keywordstyle=\color{magenta},
+numberstyle=\tiny\color{codegray},
+stringstyle=\color{codepurple},
+basicstyle=\ttfamily\footnotesize,
+breakatwhitespace=false,
+breaklines=true,
+captionpos=b,
+keepspaces=true,
+numbers=left,
+numbersep=5pt,
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+tabsize=2
+}
+
+\lstset{style=code}
+
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0.8em}
@@ -100,6 +130,13 @@
     Des Weiteren besitzt es sechs analoge Pins, welche auch auf Spannungsschwankungen reagieren können.
     Weitere wichtige Pins sind In-Pins, welche eine Spannung von 5V liefern können und Out-Pins, welche eine Verbindung zur Erdung herstellen.
 
+    \section{Begriffe}
+    \label{sec:begriffe}
+
+    \subsection{Pulsewellenmodulation (PWM)}
+    \label{subsec:pulsewellenmodulation-(pwm)}
+
+
     \section{Aufgabe 1 - Ampelsteuerung}
     \label{sec:aufgabe-1}
 
@@ -144,6 +181,203 @@
 
     \subsection{Vorbereitung}
     \label{subsec:A1-vorbereitung}
+
+    Für den Schaltkreis müssen die Vorwiederstände für die LEDs berechnet werden.
+    Folgende Angaben sind bekannt.
+
+    \begin{itemize}
+        \item Ausgangsspannung der Pins des Mikrocontrollers: $V_{out} = 5V$
+        \item Diodenspannung der LEDs: $U_D = 2V$
+        \item Diodenstrom der LEDs: $I_D = 15mA$
+    \end{itemize}
+
+    Zur Berechnung wird folgender Stromkreis angenommen.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[height=0.4\textheight]{pictures/A1.png}
+        \caption{Stromkreis A1}
+        \label{fig:stromkreis-a1}
+    \end{figure}
+
+    Die Formel zur Berechnung des Stroms durch eine Diode ist bekannt.
+
+    \begin{equation}
+        I_D =  \frac{1}{R_d} * (U - U_D) \label{eq:diodenstrom}
+    \end{equation}
+
+    Damit kann der benötigte Vorwiderstand berechnet werden.
+
+    \begin{equation}
+        \begin{align}
+            I_D =  \frac{1}{R_D} * (U - U_D) \Rightarrow \\
+            R_D = \frac{1}{I_D} * (U - U_D) \\
+            = \frac{1}{15mA} * (5V - 2V) \\
+            = 200\Omega
+        \end{align}
+        \label{eq:equation-a1}
+    \end{equation}
+
+    Nachdem in der E6 Reihe keine $200\Omega$ Widerstände vorhanden sind, wurden $150\Omega$ gewählt.
+    Diese Wahl erfolgt aus folgenden Überlegungen.
+
+    \begin{enumerate}
+        \item Laut angabe benötigt die LED $2V$ um zu schalten.
+        \item Es existieren die Widerstände $150\Omega$ und $220\Omega$ in der E6-Reihe
+        \item Bei einem Widerstand von $220\Omega$ würden, laut Gleichung \ref{eq:diodenstrom}, $I_D = \frac{3V}{220\Omega} = 13,636mA$ durch die LED fließen.
+        \item Bei einem Widerstand von $150\Omega$ würden, laut Gleichung \ref{eq:diodenstrom}, $I_D = \frac{3V}{150\Omega} = 20mA$ durch die LED fließen.
+    \end{enumerate}
+    Da die Leuchtkraft einer LED von der Stromstärke abhängt und der Maximalstrom bei $20mA$ liegt, wurden $150\Omega$ gewählt.
+    Bei dieser Größe wird die LED bei theoretisch voller Leuchtkraft betrieben ohne die Lebensdauer markant zu verkürzen.
+
+    \subsection{Praktikumsaufgabe}
+    \label{subsec:praktikumsaufgabe}
+
+    Der Stromkreis wurde laut Abbildung \ref{fig:stromkreis-a1} implementiert.
+    Die Implementierung wird in Abbildung \ref{fig:implementierung-a1} gezeigt.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\textwidth]{pictures/a1-praktik.png}
+        \caption{Implementiert Stromkreis von Aufgabe 1}
+        \label{fig:implementierung-a1}
+    \end{figure}
+
+    Wie in Abbildung \ref{fig:implementierung-a1} gezeigt, wurden die Pins 13, 12 und 8 gewählt.
+    Für die Wahl wurden die digitalen Pins herangezogen, da eine analoge Ausgabe nicht erforderlich war.
+    Die Pins die mit einer Tilde ($\sim$) markiert sind, sind in der Lage ein PWM-Signal zu liefern.
+    Da ein solches Signal nicht benötigt wird, wurden auch diese ausgeschlossen.
+    Von oben nach unten betrachte, wurden nun drei Pins ausgewählt, diese sind 13, 12, und 8.
+    Die genannten Pins werden, im Code, als digitale Output-Pins konfiguriert.
+
+    Im nachfolgendem Text wird der Programmcode der Aufgabe erläutert.
+    Einzelne Teile des Codes werden ausgewählt und beschrieben.
+    Am Ende dieser Sektion befindet sich der vollständige Programmcode.
+
+\begin{lstlisting}[language=C,label={lst:a1-konstanten}, caption={Konstanten für Aufgabe 1}]
+const int PIN_RED = 13;
+const int PIN_YELLOW = 12;
+const int PIN_GREEN = 8;
+\end{lstlisting}
+
+    In Listing \ref{lst:a1-konstanten} werden die Pins definiert.
+    Durch das Anlegen von Konstanten für die Pins, kann der Code aussagekräftiger gestaltet werden.
+    Des weiteren entsteht dadurch die Möglichkeit, andere Pins zu verwenden, ohne den gesamtem Code durchgehen zu müssen.
+    Es reicht die Nummer an einer Stelle zu ändern.
+
+\begin{lstlisting}[language=C,label={lst:a1-setup}, caption={Setup für Aufgabe 1}]
+void setup()
+{
+  pinMode(PIN_RED, OUTPUT);
+  pinMode(PIN_YELLOW, OUTPUT);
+  pinMode(PIN_GREEN, OUTPUT);
+}
+\end{lstlisting}
+
+    In Listing \ref{lst:a1-setup} werden die Pins angelegt und konfiguriert.
+    Wie oben beschrieben werden die Pins als Output-Pins, d.h., als Spannungsquelle, angelegt.
+
+\begin{lstlisting}[language=C,label={lst:a1-onoff}, caption={On- und Off Methoden für Aufgabe 1}]
+void off(int pin) {
+  digitalWrite(pin, LOW);
+}
+
+void on(int pin) {
+  digitalWrite(pin, HIGH);
+}
+\end{lstlisting}
+
+    In Listing \ref{lst:a1-onoff} werden die Pins entweder ausgeschalten (LOW) oder eingeschalten (HIGH).
+    Durch das Verwenden dieser Methoden ist es einfacher, die Phasen zu definieren bzw., im Code zu erkennen.
+
+\begin{lstlisting}[language=C,label={lst:a1-loop}, caption={Programmschleife für Aufgabe 1}]
+void loop()
+{
+  off(PIN_YELLOW);
+  on(PIN_RED);
+  delay(4 * 1000);
+
+  on(PIN_YELLOW);
+  delay(1 * 1000);
+
+  off(PIN_RED);
+  off(PIN_YELLOW);
+  on(PIN_GREEN);
+  delay(4 * 1000);
+
+  off(PIN_GREEN);
+  on(PIN_YELLOW);
+  delay(1 * 1000);
+}
+\end{lstlisting}
+
+    In Listing \ref{lst:a1-loop} werden die einzelnen Phasen implementiert.
+    Nach jeder Leerzeile, d.h., nach Zeile 6, 9, und 14 beginnt jeweils eine neue Phase.
+
+    Zu Beginn wird Phase 1 implementiert.
+    Diese Schaltet die gelbe LED, Pin 12, aus, falls vorher Phase 4 aktiv war und schaltet die rote LED, Pin 13, an.
+    Danach wird die $delay(x)$ Funktion aufgerufen, welche die Programmausführung für $x$ Millisekunden unterbricht.
+    Die Angabe von $x$ als Berechnung aus $Sekunde * 1000$ wurde gewählt, um im Code besser erkenntlich zu machen, dass es sich um Millisekunden handelt.
+    Der Programmfluss wird daher für vier Sekunden unterbrochen.
+
+    Dann folgt Phase 2, welche zusätzlich zur Roten auch die gelbe LED einschaltet.
+    Der Programmfluss wird für eine Sekunde unterbrochen.
+
+    Es folgt Phase 3.
+    Die Rote und die gelbe LED werden ausgeschaltet.
+    Die Grüne, Pin 8, wird eingeschaltet.
+    Der Programmfluss wird für weitere vier Sekunden unterbrochen.
+
+    Schlussendlich folgt Phase 4.
+    Es wird die grüne LED wieder ausgeschaltet, während die Gelbe aktiv wird.
+    Es folgt wieder eine Unterbrechung des Programms für eine Sekunde.
+    Am Ende der $loop()$ Funktion wird sie wieder von Beginn an, d.h., von Phase 1 aus, ausgeführt.
+
+
+    \begin{lstlisting}[language=C,label={lst:a1-programmcode}, caption={Vollständiger Programmcode für Aufgabe 1}]
+const int PIN_RED = 13;
+const int PIN_YELLOW = 12;
+const int PIN_GREEN = 8;
+
+void setup()
+{
+  pinMode(PIN_RED, OUTPUT);
+  pinMode(PIN_YELLOW, OUTPUT);
+  pinMode(PIN_GREEN, OUTPUT);
+}
+
+void loop()
+{
+  off(PIN_YELLOW);
+  on(PIN_RED);
+  delay(4 * 1000);
+
+  on(PIN_YELLOW);
+  delay(1 * 1000);
+
+  off(PIN_RED);
+  off(PIN_YELLOW);
+  on(PIN_GREEN);
+  delay(4 * 1000);
+
+  off(PIN_GREEN);
+  on(PIN_YELLOW);
+  delay(1 * 1000);
+}
+
+void off(int pin) {
+  digitalWrite(pin, LOW);
+}
+
+void on(int pin) {
+  digitalWrite(pin, HIGH);
+}
+    \end{lstlisting}
+
+    \section{Aufgabe 2 - Reaktionsspiel}
+    \label{sec:aufgabe-2---reaktionsspiel}
+
+    Dummy Text
 
     \addcontentsline{toc}{section}{References}
     \printbibliography
