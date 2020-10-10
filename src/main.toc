@@ -9,10 +9,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Widerstände}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Aufgabe 1 - Ampelsteuerung}{4}%
+\contentsline {subsection}{\numberline {2.3}Taster}{4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Materialien}{5}%
+\contentsline {subsection}{\numberline {2.4}Mikrocontroller \cite {arduino-r3}}{4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Vorbereitung}{5}%
+\contentsline {section}{\numberline {3}Begriffe}{5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{5}%
+\contentsline {subsection}{\numberline {3.1}Pulsewellenmodulation (PWM)}{5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}PullUp}{5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Aufgabe 1 - Ampelsteuerung}{6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Materialien}{6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Vorbereitung}{6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Praktikumsaufgabe}{8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}Fehlerdiskussion}{12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5}Zusammenfassung}{12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Aufgabe 2 - Reaktionsspiel}{13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Materialien}{13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Vorbereitung}{14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Praktikumsaufgabe}{14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{21}%

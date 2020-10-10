@@ -1,0 +1,90 @@
+
+
+\section{Einleitung}
+\label{sec:einleitung}
+
+Das Wissen um die Funktionsweise eines Mikrocontrollers ist wesentlicher Bestandteil eines Informatik-Studiums.
+Im Zuge Dieses werden in diesem Protokoll verschiedene Experimente beschrieben und evaluiert.
+Insgesamt werden sieben Experimente begutachtet und diskutiert, welche im Zeitraum vom 28.September 2020 und 2.Oktober 2020 durchgeführt wurden.
+
+
+\section{Verwendete Materialien}
+\label{sec:verwendete-materialien}
+
+Jede Sektion gibt die in ihr verwendeten Materialien mitsamt ihrer Stückzahl an.
+In dieser Sektion werden alle Materialien im Allgemeinen gelistet und beschrieben.
+
+\subsection{LED}
+\label{subsec:led}
+Eine Leuchtdiode (LED) ist ein Bauelement der Elektronik.
+Wird sie von elektrischen Strom durchflossen beginnt sie Licht auszustrahlen.
+Die Wellenlänge, d.h., die Farbe des Lichts sowie ob es für das menschliche Auge sichtbar ist oder nicht, hängt von den benutzten Materialien im inneren der LED ab.
+Die in der LED verwendeten Materialien sind für dieses Protokoll nicht weiter von Bedeutung.
+Für die beschriebenen Aufgaben wurden die folgenden LEDs verwendet.
+
+\begin{table}[h]
+    \centering
+    \caption{LEDs - Farben, Flussspannung, Maximalstrom \cite{led-elektrische-eigenschaften}}
+    \label{tab:leds-farben-und-elemente}
+    \begin{tabular}{| l | l | l |}
+        \hline
+        Farbe & Durchflussspannung & Maximalstrom \\
+        \hline
+        Rot   & 1,6V - 2,2V        & 20mA         \\
+        Gelb  & 1,9V - 2,5V        & 20mA         \\
+        Grün  & 1,9V - 2,5V        & 20mA         \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Widerstände}
+\label{subsec:widerstände}
+
+Widerstände werden verwendet, um einen Spannungsabfall in einem Stromkreis zu verursachen.
+Damit kann die Stromstärke in einem Stromkreis begrenzt beziehungsweise verringert werden.
+Oft wird bei der Verwendung von LEDs ein sogenannter Vorwiederstand verwendet, um die Stromstärke soweit abzusenken, dass die LED nicht beschädigt wird.
+
+In den Aufgaben wurden Widerstände der sogenannten E6-Reihe verwendet.
+E-Reihen sind normierte Widerstandsgrößen, wobei die Zahl die Stufen zwischen den Potenzen angibt.
+D.h., bei der E6-Reihe sind sechs verschiedene Widerstandsgrößen zwischen $10\Omega$ und $100\Omega$, zwischen $100\Omega$ und $1000\Omega$, u.s.w. bis zum oberen Limit von $10M\Omega$.
+
+Die verwendeten Widerstände sind Farbcodiert, um sie voneinander unterscheiden zu können.
+Die Farbkodierung von Widerständen wird in den Aufgaben, in denen sie verwendet werden, angegeben.
+Die Bedeutung der Codierung der verwendeten Widerstände kann in Tab. \ref{tab:farbcodierung-von-widerständen} abgelesen werden.
+
+\begin{table}
+    \begin{adjustwidth}{-2cm}{}
+        \caption{Farbcodierung von Widerständen}
+        \label{tab:farbcodierung-von-widerständen}
+        \begin{tabular}{| l | l | l | l | l |}
+            \hline
+            Farbe & 1.Ring (10er Stelle) & 2.Ring (1er Stelle) & 3.Ring (Multiplikator) & 4.Ring (Toleranz) \\
+            \hline
+            Braun & 1                    & 0                   & 10                     & $\pm 1$           \\
+            Grün  & 5                    & 5                   & $100\ 000$             & $\pm 0.5$         \\
+            Gold  & -                    & -                   & $0.1$                  & $\pm 5$           \\
+            \hline
+        \end{tabular}
+    \end{adjustwidth}
+\end{table}
+
+\subsection{Taster}
+\label{subsec:taster}
+
+\subsection{Mikrocontroller \cite{arduino-r3}}
+\label{subsec:mikrocontroller}
+
+Mikrocontroller werden verwendet, um komplexere Logik in eine elektronische Schaltung zu integrieren.
+Die in diesem Protokoll verwendete Mikrocontroller sind Mikrocontroller vom Typ Arduino Uno Rev 3.
+Diese Mikrocontroller besitzen 14 digitale Pins, an denen eine Spannung von entweder 0V oder 5V angelegt oder ausgegeben werden kann.
+Des Weiteren besitzt es sechs analoge Pins, welche auch auf Spannungsschwankungen reagieren können.
+Weitere wichtige Pins sind In-Pins, welche eine Spannung von 5V liefern können und Out-Pins, welche eine Verbindung zur Erdung herstellen.
+
+\section{Begriffe}
+\label{sec:begriffe}
+
+\subsection{Pulsewellenmodulation (PWM)}
+\label{subsec:pulsewellenmodulation-(pwm)}
+
+\subsection{PullUp}
+\label{subsec:pullup}
