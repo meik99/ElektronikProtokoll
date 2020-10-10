@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  10 OCT 2020 00:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  10 OCT 2020 14:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -612,9 +612,10 @@ Package pdftex.def Info: deckblatt.pdf , page1 used on input line 50.
  [1
 
  </home/michael/IdeaProjects/ElektronikProtokoll/src/deckblatt.pdf>]
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/main.toc)
+(/home/michael/IdeaProjects/ElektronikProtokoll/src/main.toc [2{/var/lib/texmf/
+fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write4
- [2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+ [3]
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/general.tex
 /home/michael/IdeaProjects/ElektronikProtokoll/src/general.tex:27: Illegal para
 meter number in definition of \abx@field@howpublished.
@@ -626,19 +627,19 @@ You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-[3
+[4
 
 ]
 Overfull \hbox (44.89929pt too wide) in paragraph at lines 59--68
 [][] 
  []
 
-) [4] [5] (/home/michael/IdeaProjects/ElektronikProtokoll/src/aufgabe-1.tex
-[6
+) [5] [6] (/home/michael/IdeaProjects/ElektronikProtokoll/src/aufgabe-1.tex
+[7
 
 
 ]
-<pictures/A1.png, id=125, 275.0275pt x 347.2975pt>
+<pictures/A1.png, id=129, 275.0275pt x 347.2975pt>
 File: pictures/A1.png Graphic file (type png)
 <use pictures/A1.png>
 Package pdftex.def Info: pictures/A1.png  used on input line 59.
@@ -658,8 +659,8 @@ l.78     \end{align}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[7 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/A1.png>]
-<pictures/a1-praktik.png, id=132, 926.46124pt x 656.4525pt>
+[8 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/A1.png>]
+<pictures/a1-praktik.png, id=135, 926.46124pt x 656.4525pt>
 File: pictures/a1-praktik.png Graphic file (type png)
 <use pictures/a1-praktik.png>
 Package pdftex.def Info: pictures/a1-praktik.png  used on input line 102.
@@ -673,25 +674,25 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) [8] [9 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a1-prakti
-k.png>] [10] [11])
-[12] (/home/michael/IdeaProjects/ElektronikProtokoll/src/aufgabe-2.tex [13
+) [9] [10 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a1-prakt
+ik.png>] [11] [12])
+[13] (/home/michael/IdeaProjects/ElektronikProtokoll/src/aufgabe-2.tex [14
 
 
 ]
-<pictures/a2-praktik.png, id=156, 1211.52625pt x 660.4675pt>
+<pictures/a2-praktik.png, id=159, 1211.52625pt x 660.4675pt>
 File: pictures/a2-praktik.png Graphic file (type png)
 <use pictures/a2-praktik.png>
 Package pdftex.def Info: pictures/a2-praktik.png  used on input line 72.
 (pdftex.def)             Requested size: 360.0pt x 196.2572pt.
 
-[14]
-<pictures/a2-taster.png, id=161, 563.10374pt x 413.545pt>
+[15]
+<pictures/a2-taster.png, id=164, 563.10374pt x 413.545pt>
 File: pictures/a2-taster.png Graphic file (type png)
 <use pictures/a2-taster.png>
 Package pdftex.def Info: pictures/a2-taster.png  used on input line 92.
 (pdftex.def)             Requested size: 208.80066pt x 153.34369pt.
- [15 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a2-praktik.pn
+ [16 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a2-praktik.pn
 g> </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a2-taster.png>]
 
 Overfull \hbox (33.6765pt too wide) in paragraph at lines 116--121
@@ -700,18 +701,31 @@ e zu-erst mit-tels $\OML/cmm/m/it/10.95 sizeof\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
 /10.95 PINS\OT1/cmr/m/n/10.95 )$
  []
 
-[16]
+[17]
 
-LaTeX Warning: Reference `subsec:a2-vorbereitunga' on page 17 undefined on inpu
-t line 152.
+LaTeX Warning: Reference `subsec:a2-vorbereitunga' on page 18 undefined on inpu
+t line 155.
 
-<pictures/a2-game-state.png, id=170, 763.85374pt x 416.55624pt>
+<pictures/a2-game-state.png, id=173, 763.85374pt x 416.55624pt>
 File: pictures/a2-game-state.png Graphic file (type png)
 <use pictures/a2-game-state.png>
-Package pdftex.def Info: pictures/a2-game-state.png  used on input line 158.
+Package pdftex.def Info: pictures/a2-game-state.png  used on input line 161.
 (pdftex.def)             Requested size: 360.0pt x 196.32173pt.
-[17 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a2-game-state.
-png>] [18] [19]) [20]
+[18] [19 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a2-game-s
+tate.png>]
+Overfull \hbox (14.53741pt too wide) in paragraph at lines 233--236
+[]\OT1/cmr/m/n/10.95 In der $\OML/cmm/m/it/10.95 init[]game\OT1/cmr/m/n/10.95 (
+)$-Methode wird des Zu-stand mit-tels $\OML/cmm/m/it/10.95 game[]over$ \OT1/cmr
+/m/n/10.95 zur[]uckgesetzt.
+ []
+
+[20] [21]
+Overfull \hbox (1.70676pt too wide) in paragraph at lines 306--312
+[]\OT1/cmr/m/n/10.95 In Li-sting 15[] wer-den die ver-wen-de-ten Hilfs-me-tho-d
+en ge-zeigt. F[]ur $\OML/cmm/m/it/10.95 write[]to[]all$
+ []
+
+[22] [23] [24] [25]) [26]
 /home/michael/IdeaProjects/ElektronikProtokoll/src/main.tex:63: Illegal paramet
 er number in definition of \abx@field@howpublished.
 <to be read again> 
@@ -722,7 +736,7 @@ You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-[21
+[27
 
 ] (/home/michael/IdeaProjects/ElektronikProtokoll/src/main.aux
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/general.aux)
@@ -737,10 +751,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 13768 strings out of 480478
- 231200 string characters out of 5905960
- 985429 words of memory out of 5000000
- 29615 multiletter control sequences out of 15000+600000
+ 13778 strings out of 480478
+ 231392 string characters out of 5905960
+ 980530 words of memory out of 5000000
+ 29625 multiletter control sequences out of 15000+600000
  538590 words of font info for 46 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  40i,18n,57p,814b,2913s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -756,10 +770,10 @@ cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
 Output written on /home/michael/IdeaProjects/ElektronikProtokoll/src/main.pdf (
-21 pages, 1004626 bytes).
+27 pages, 1021593 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 249 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

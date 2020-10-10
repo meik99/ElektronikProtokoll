@@ -117,7 +117,10 @@ Um in C die Länge eines Arrays zu bestimmen, müsste zuerst mittels $sizeof(PIN
 Dieser Wert müsste sodann durch das Ergebnis von $sizeof(int)$, die Menge an Speicher die ein Integer-Wert im Speicher belegt, dividiert werden.
 Das Ergebnis aus $sizeof(PINS) / sizeof(int)$ würde dann die Länge des Arrays ergeben.
 Einfacher ist es daher, die Größe als Konstante anzugeben, wenn diese, wie in diesem Fall, bekannt ist.
-Mit der Konstante $PIN\:BUTTON$ wird die Pinnummer des Pins angegeben, welcher später den Zustand des Tasters erkennt.
+Mit der Konstante $PIN\_BUTTON$ wird die Pinnummer des Pins angegeben, welcher später den Zustand des Tasters erkennt.
+
+Die Konstante $WINNING\_PIN\_INDEX$ gibt an, welcher Index des Pin-Arrays die grüne LED darstellt,
+D.h., die der Taster gedrückt, wenn der Pin von $PINS[WINNING\_PIN\_INDEX]$ eingeschaltet ist, ist zum richtigen Zeitpunkt gedrückt worden.
 
 \begin{lstlisting}[language=C,label={lst:a2-const-interval}, caption={Standard Interval zum LED wechsel}]
 const unsigned long INTERVAL_DEFAULT = 5000;
@@ -165,15 +168,183 @@ Die Variable $pin\_index$ ist nicht mittels $volatile$ markiert, da sie sich nur
 Nach Ablauf von $interval$ wird sie um 1 erhöht bis zu einem Maximum von $NUM\_PINS - 1$.
 Würde sie den Wert $NUM\_PINS$ annehmen, wird sie wieder auf 0 zurückgesetzt.
 Diese Variable gibt an, welcher Index, von 0 beginnend, aus $PINS$ verwendet wird, um eine LED anzusteuern.
-D.h., $pin\_index = 0 \Rightarrow \text Pin13 = HIGH$, $pin\_index = 1 \Rightarrow \text Pin12 = HIGH$, u.s.w..
+D.h., $pin\_index = 0 \Rightarrow Pin13 = HIGH$, $pin\_index = 1 \Rightarrow Pin12 = HIGH$, u.s.w..
 
 \begin{lstlisting}[language=C,label={lst:a2-serial-begin}, caption={Einstellen der seriellen Schnittstelle}]
 void setup() {
   Serial.begin(9600);
 \end{lstlisting}
 
+Mit dem Kommando in Listing \ref{lst:a2-serial-begin} wird eine serielle Verbindung zu einem verbundenem Computer hergestellt.
+Damit kann später im Programm Text an den Computer übertragen oder vom Computer auf den Mikrocontroller gesendet werden.
+Das Argument der Methode, $9600$ gibt die Baudrate an.
 
+\begin{lstlisting}[language=C,label={lst:a2-pin-setup}, caption={Konfiguration der Pins}]
+int i;
+for (i = 0; i < NUM_PINS; i++) {
+    pinMode(PINS[i], OUTPUT);
+}
+\end{lstlisting}
 
+In Listing \ref{lst:a2-pin-setup} werden die Pins durchgegangen.
+Hier wird das in Listing \ref{lst:a2-const-pin} angelegte Array zum ersten Mal verwendet.
+Es werden hier alle Pinnummern in dem Arrays durchgelaufen und als Output eingestellt.
+Dadurch muss nicht jede Pinnummer einzeln eingerichtet werden.
+
+\begin{lstlisting}[language=C,label={lst:a2-button setup}, caption={Einstellen des Buttons}]
+pinMode(PIN_BUTTON, INPUT_PULLUP);
+
+attachInterrupt(
+    digitalPinToInterrupt(PIN_BUTTON),
+    on_button_change,
+    CHANGE);
+\end{lstlisting}
+
+Der Code in Listing \ref{lst:a2-button setup} setzt nun den Pin, der an dem Taster angeschlossen ist, auf Input-PullUp und verknüpft ihn mit einem Interrupt.
+Die Funktion $on\_button\_change$ wird nun aufgerufen, jedes mal wenn der Taster manipuliert wird.
+Der Parameter dritte Parameter der $attachInterrupt$-Methode, in diesem Fall $CHANGE$, gibt an was passieren muss damit die Methode aufgerufen wird.
+$CHANGE$ beduetet, dass jedes mal wenn sich das Potenzial ändert, daher entweder von $5V$ auf $0V$ fällt oder von $0V$ auf $5V$ steigt, der Interrupt ausgeführt wird.
+
+Des weiteren gibt es noch weitere Werte, die übergeben werden können, welche verschieden Zustände abbilden.
+
+\begin{itemize}
+    \item $LOW$, der Interrupt wird ausgeführt, wenn am Pin $0V$ anliegen
+    \item $CHANGE$, der Interrupt wird ausgeführt, wenn sich das Potenzial am Pin ändert
+    \item $RISING$, der Interrupt wird ausgeführt, wenn die Spannung am Pin von $0V$ auf $5V$ steigt
+    \item $FALLING$, der Interrupt wird ausgeführt, wenn die Spannung am Pin von $5V$ auf $0V$ fällt
+\end{itemize}
+
+\begin{lstlisting}[language=C,label={lst:a2-init}, caption={Setzen der Standardwerte}]
+  init_game();
+}
+
+void init_game() {
+  game_over = false;
+  interval = INTERVAL_DEFAULT;
+  pin_index = 0;
+  digitalWrite(PINS[0], HIGH);
+}
+\end{lstlisting}
+
+Listing \ref{lst:a2-init} zeigt die Methode, die aufgerufen wird, wenn das Spiel neu gestartet wird.
+Der Aufruf von $init\_game()$ zu Begin des Listings ist noch in der $setup()$-Methode zu finden.
+Dadurch werden noch vor Spielbeginn die Werte richtig gesetzt.
+
+In der $init\_game()$-Methode wird des Zustand mittels $game\_over$ zurückgesetzt.
+Das Intervall zwischen den LED wechseln wird auf den Standardwert gesetzt.
+Die aktive LED wird mittels $pin\_index = 0$ auf die Erste gesetzt und mit dem Aufruf von $digitalWrite(\dots)$ eingeschaltet.
+
+\begin{lstlisting}[language=C,label={lst:a2-button-interrupt}, caption={Interrupt Methoden des Tasters}]
+void on_button_change() {
+  int button_state = digitalRead(PIN_BUTTON);
+  if (button_state == HIGH) {
+   	on_button_rising();
+  } else {
+    on_button_falling();
+  }
+}
+
+void on_button_rising() {
+  button_pressed = true;
+
+  if (pin_index == WINNING_PIN_INDEX &&
+     !game_over) {
+    interval = interval / 2;
+  } else {
+    game_over = true;
+  }
+}
+
+void on_button_falling() {
+  button_pressed = false;
+}
+\end{lstlisting}
+
+Obwohl die Methoden, welche die Logik des Interrupts darstellen, am Ende des Codes liegen, werden sie hier besprochen.
+Damit kann ein Kontext für andere Codeteile erzeugt werden.
+
+In Listing \ref{lst:a2-button-interrupt} wird die in Listing \ref{lst:a2-button setup} verwendete Methode gezeigt.
+Zu Beginn von $on\_button\_change()$ wird der Zustand des Tasters ausgelesen.
+Liegen zum Zeitpunkt des Aufrufs $5V$ am Pin an, so wird $on\_button\_rising()$ aufgerufen, ansonsten wird $on\_button\_falling()$ verwendetet.
+Dieser Distinktion muss verwendet werden, da nur ein Interrupt pro Pin angelegt werden kann.
+Es können die entsprechenden Methoden nicht gleichzeitig direkt an den Pin angehängt werden.
+Daher muss die Methode $on\_button\_change()$ diese Unterscheidung durchführen.
+
+In $on\_button\_rising()$ wird zuerst der Zustand von $button\_pressed$ auf $true$ gesetzt.
+Damit kann in der Programmschleife erkannt werden, ob der Taster gedrückt wird oder nicht.
+Danach wird überprüft welche LED zurzeit leuchtet, indem der Wert in $pin\_index$ überprüft wird und ob das Spiel bereits vorbei ist.
+Die letztere Überprüfung wird gemacht, da der Taster auch dann getätigt werden kann, wenn, z.b., alle LEDs blinken.
+Wurde der Taster nicht zum richtigen Zeitpunkt getätigt, so wird der Zustand des Spiels auf "Game Over" gesetzt, indem die enstprechende Variable auf $true$ gesetzt wird.
+
+\begin{lstlisting}[language=C,label={lst:a2-hilfsmethoden}, caption={Hilfsmethoden}]
+void blink_all() {
+  int j;
+  for (j = 0; j < 3; j++) {
+    int i;
+    write_to_all(HIGH);
+    delay(500);
+    write_to_all(LOW);
+    delay(500);
+  }
+}
+
+void write_to_all(int state) {
+  int i;
+  for (i = 0; i < NUM_PINS; i++) {
+    digitalWrite(PINS[i], state);
+  }
+}
+
+void increase_pin_index() {
+    pin_index++;
+    if (pin_index >= NUM_PINS){
+      pin_index = 0;
+    }
+}
+\end{lstlisting}
+
+In Listing \ref{lst:a2-hilfsmethoden} werden die verwendeten Hilfsmethoden gezeigt.
+Für $write\_to\_all$ kann der gewünschte Zustand übergeben werden, $HIGH$ oder $LOW$, und dieser wird, ähnlich wie in $setup()$, mittels einer Schleife an alle Pins im $PINS$-Array übernommen.
+$blink\_all$ wird verwendet, um das Blinken der LEDs am Ende des Spiels zu implementieren.
+Es werden hier drei mal alle Pins im $PINS$-Array erst mittels $write\_to\_all(HIGH)$ eingeschaltet.
+Danach wird 500ms lang mit $delay(500)$ gewartet.
+Mit $write\_to\_all(LOW)$ und anschließenden $delay(500)$ werden die LEDs wieder ausgeschaltet und 500ms lang gewartet.
+
+$increase\_pin\_index()$ hat die Aufgabe, die Variable $pin\_index$ zu erhöhen.
+Würde die Variable das Limit von $NUM\_PINS-1$ überschreiten, wird die Variable wieder auf 0 gesetzt.
+
+\begin{lstlisting}[language=C,label={lst:a2-loop}, caption={Programmschleife}]
+void loop()
+{
+  current_millis = millis();
+
+  if (current_millis - previous_millis >= interval
+       && !button_pressed
+       && !game_over) {
+    digitalWrite(PINS[pin_index], LOW);
+    increase_pin_index();
+    digitalWrite(PINS[pin_index], HIGH);
+	previous_millis = current_millis;
+  } else if (game_over) {
+    blink_all();
+    init_game();
+    previous_millis = current_millis;
+  }
+}
+\end{lstlisting}
+
+In Listing \ref{lst:a2-loop} wird die Programmschleife beschrieben.
+Hier wird nun die Variable $current\_millis$ verwendet, um die vergangene Zeit zu speichern.
+Ist der Abstand zwischen $current\_millis$ und $previous\_millis$, zu Beginn 0, größer oder gleich dem derzeitigen Intervall, so wird zuerst die momentan aktive LED ausgeschaltet.
+Danach wird die Methode $increase\_pin\_index$ ausgeführt, um den verwendeten Index auf den nächsten Pin zu setzen.
+Die LED die als nächstes leuchten soll, wird sodann eingeschalten.
+Schlussendlich wird der Wert von $previous\_millis$ auf den Wert von $current\_millis$ gesetzt, um wieder den Zustand $current\_millis - previous\_millis < interval$ zu erreichen.
+Dieser Ablauf wird allerdings nur dann durchgeführt, wenn weder der Taster gedrückt, noch das Spiel vorbei ist.
+
+Ist das Spiel vorbei so wird die vorher beschriebene Methode $blink\_all()$ aufgerufen, um alle LEDs blinken zu lassen.
+Mittels $init\_game()$ werden alle globalen Werte wieder auf ihren Standard zurückgesetzt.
+Schlussendlich wird der Wert von $previous\_millis$ auf den Wert von $current\_millis$ gesetzt, um das selbe Intervall wie bei einem Spielstart zu haben.
+Würde dies nicht gemacht, könnte das Spiel früher von der ersten LED auf die Zweite überspringen als gewollt.
 
 \begin{lstlisting}[language=C,label={lst:a1-loop}, caption={Vollständiger Programmcode für Aufgabe 2}]
 const int NUM_PINS = 5;
@@ -286,3 +457,19 @@ void on_button_falling() {
   button_pressed = false;
 }
 \end{lstlisting}
+
+\subsection{Fehlerdiskussion}
+\label{sec:a2-fehlerdiskussion}
+
+Es wurde der Fehler gemacht, dass in Listing \ref{lst:a2-loop} auch auf den Zustand des Tasters geprüft wird.
+D.h., der Taster darf nicht gedrückt sein, damit das Spiel weiter läuft.
+Dieser Fehler verursacht, dass das Lauflicht pausiert und nicht weiterläuft, wenn der Taster nicht mehr losgelassen wird.
+
+Ein weiterer glücklicher Zufall konnte einen weiteren Fehler verhindern.
+Es wurde nämlich die Funktionsweise des Tasters falsch verstanden.
+Die Annahme war nicht, dass wie in Abbildung \ref{fig:schaltung-taster-pull-up} dargestellt, die Spalte 15, bzw.\ die Spalte 13,  verbunden ist, sondern dass Spalte 15 mit Spalte 13 verbunden ist.
+Würde dies zutreffen, so würde die Schaltung nicht funktionieren.
+Nachdem jedoch auch die gegebene Schaltung eines Pull-Down Widerstands falsch gelesen wurde, wurde sie unbeabsichtigt richtig implementiert.
+
+\subsection{Zusammenfassung}
+\label{sec:a2-zusammenfassung}
