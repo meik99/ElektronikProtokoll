@@ -80,6 +80,33 @@ Diese Mikrocontroller besitzen 14 digitale Pins, an denen eine Spannung von entw
 Des Weiteren besitzt es sechs analoge Pins, welche auch auf Spannungsschwankungen reagieren können.
 Weitere wichtige Pins sind In-Pins, welche eine Spannung von 5V liefern können und Out-Pins, welche eine Verbindung zur Erdung herstellen.
 
+\subsection{Logikbausteine}
+\label{subsec:logikbausteine}
+
+Um verschiedene Logikgatter in Schaltungen verwenden zu können, ohne komplizierte Schaltkreise bauen zu müssen, werden Logikbausteine verwenden.
+Diese Bausteine implementieren verschiedene Gatter.
+D.h., bei zwei Eingängen $a$ und $b$, wird durch das Anwenden der Funktion, die der Baustein implementiert,  der Ausgang $y$ erzeugt.
+Diese Funktionen bilden logische Operationen ab.
+Die Erklärung von logischen Funktionen würden über den Umfang dieses Protokolls hinausgehen und werden daher nicht weiter erklärt.
+In Tabelle \ref{tab:bausteine-und-deren-logische-funktionen} sind die verwendeten Bausteine und die Funktionen die sie implementieren gelistet.
+
+\begin{table}[ht]
+    \centering
+    \caption{Bausteine und deren logische Funktionen}
+    \label{tab:bausteine-und-deren-logische-funktionen}
+    \begin{tabular}{| l | l |}
+        \hline
+        Bausteinbezeichnung & Funktion \\
+        \hline
+        74HC00 & NAND \\
+        74HC02 & NOR \\
+        74HC08 & AND \\
+        74HC32 & OR \\
+        74HC86 & XOR \\
+        \hline
+    \end{tabular}
+\end{table}
+
 \section{Begriffe}
 \label{sec:begriffe}
 
@@ -91,3 +118,6 @@ Weitere wichtige Pins sind In-Pins, welche eine Spannung von 5V liefern können 
 
 \subsection{Baudrate}
 \label{subsec:baudrate}
+
+\subsection{Wahrheitstabelle}
+\label{subsec:wahrheitstabelle}

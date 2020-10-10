@@ -38,7 +38,7 @@
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://store.arduino.cc/arduino-uno-rev3}}
+      \field{howpublished}{\url{"https://store.arduino.cc/arduino-uno-rev3"}}
       \field{title}{Arduino Uno Rev 3}
     \endentry
     \entry{led-elektrische-eigenschaften}{misc}{}
@@ -60,7 +60,7 @@
       \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://de.wikipedia.org/wiki/Leuchtdiode#Elektrische_Eigenschaften}}
+      \field{howpublished}{\url{"https://de.wikipedia.org/wiki/Leuchtdiode#Elektrische_Eigenschaften"}}
       \field{title}{Leuchtdiode - Elektrische Eigenschaften}
     \endentry
   \enddatalist
