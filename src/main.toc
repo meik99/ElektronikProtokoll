@@ -71,10 +71,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {7.2.2}Aufgabe 2}{36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Praktikumsaufgabe}{36}%
+\contentsline {subsubsection}{\numberline {7.2.3}Aufgabe 3}{39}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4}Fehlerdiskussion}{36}%
+\contentsline {subsection}{\numberline {7.3}Praktikumsaufgabe}{41}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5}Zusammenfassung}{36}%
+\contentsline {subsection}{\numberline {7.4}Fehlerdiskussion}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{37}%
+\contentsline {subsection}{\numberline {7.5}Zusammenfassung}{43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{44}%
