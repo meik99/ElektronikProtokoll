@@ -38,8 +38,30 @@
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{"https://store.arduino.cc/arduino-uno-rev3"}}
+      \field{howpublished}{\url{https://store.arduino.cc/arduino-uno-rev3}}
       \field{title}{Arduino Uno Rev 3}
+    \endentry
+    \entry{kondesator}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=49cf52b8dd94f556ccdbfd837f281823}{%
+           family={{Elektronik Kompenidum}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elektronik Kompendium}%
+      }
+      \strng{namehash}{49cf52b8dd94f556ccdbfd837f281823}
+      \strng{fullhash}{49cf52b8dd94f556ccdbfd837f281823}
+      \strng{bibnamehash}{49cf52b8dd94f556ccdbfd837f281823}
+      \strng{authorbibnamehash}{49cf52b8dd94f556ccdbfd837f281823}
+      \strng{authornamehash}{49cf52b8dd94f556ccdbfd837f281823}
+      \strng{authorfullhash}{49cf52b8dd94f556ccdbfd837f281823}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.elektronik-kompendium.de/sites/grd/0205301.htm}}
+      \field{title}{Kondensator im Gleichstromkreis}
     \endentry
     \entry{led-elektrische-eigenschaften}{misc}{}
       \name{author}{1}{}{%
@@ -60,7 +82,7 @@
       \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{"https://de.wikipedia.org/wiki/Leuchtdiode#Elektrische_Eigenschaften"}}
+      \field{howpublished}{\url{https://de.wikipedia.org/wiki/Leuchtdiode#Elektrische_Eigenschaften}}
       \field{title}{Leuchtdiode - Elektrische Eigenschaften}
     \endentry
   \enddatalist

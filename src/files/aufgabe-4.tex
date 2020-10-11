@@ -26,6 +26,7 @@ Neben diversen Berechnungen sind folgende Fragen zu beantworten.
         Widerstand  & $10k\Omega$   & 2     \\
         & Braun - Schwarz - Orange - Gold & \\
         Widerstand & unbekannt & k.A. \\
+        Kondensator & unbekannt & k.A \\
         Mikrocontroller & Arduino Uno R3 & 1 \\
         \hline
     \end{tabular}
@@ -35,6 +36,7 @@ In der Tabelle \ref{tab:a4-materialien} sind unbekannte Widerstände in nicht an
 Damit sind Testwiderstände gemeint, welche durch das Testen an der Schaltung gemessen werden können.
 Beim Versuch an dieser Schaltung sind die Widerstandswerte normalerweise bekannt, um die Richtigkeit der Schaltung zu bestätigen.
 Die Werte und Anzahl der verwendeten Widerstände sind jedoch nicht relevant.
+Selbiges gilt für die Kondensatoren.
 
 \subsection{Vorbereitung}
 \label{subsec:a4-vorbereitung}
@@ -194,8 +196,11 @@ daraus folgt
 \begin{align}
     t_{99\%} = 5\tau = 0,75s
 \end{align}
+
 \subsection{Praktikumsaufgabe}
 \label{subsec:a4-praktikumsaufgabe2}
+
+\subsubsection{Aufgabe 1}
 
 Es wurde die in Abbildung \ref{fig:a4-1-implemtierung} gezeigte Schaltung implementiert.
 Am Steckbrett ist eine ähnliche Schaltung wie in Abbildung \ref{fig:schaltung-a4-2} zu sehen.
@@ -259,7 +264,7 @@ void loop()
 
 In Listing \ref{lst:a4-1-loop} wird zuerst der derzeitige Wert des Pins A0 ausgelesen und in der variable \textit{value} abgelegt.
 Dieser Wert wird nun mit den in Listing \ref{lst:a4-1-konstanten} angelegten Multiplikator \textit{RESOLUTION} multipliziert, um die Spannung $U_a$, vergleiche \ref{fig:stromkreis-a1}, zu erhalten.
-Durch die Überlegung aus (26) kann nun der Widerstand $R_2$, bzw. $R_x$, errechnet werden.
+Durch die Überlegung aus (mal26) kann nun der Widerstand $R_2$, bzw. $R_x$, errechnet werden.
 
 Danach erfolgt die Ausgabe über der errechneten Größen über die serielle Schnittstelle.
 Ein Pausieren des Programms wird durchgeführt, um ein angenehmeres Lesen der Ausgabe zu ermöglichen.
@@ -290,8 +295,128 @@ void loop()
 }
 \end{lstlisting}
 
+\subsubsection{Aufgabe 2}
+
+In dieser Aufgabe, soll die Kapazität eines Kondensators ermittelt werden.
+Es wurde die Schaltung aus Abbildung \ref{fig:implementierung-aufgabe-4-2} implementiert.
+Im Unterschied zur Schaltung aus Abbildung \ref{fig:a4-1-implemtierung}, wurde der unbekannte Widerstand durch einen Kondensator ersetzt, welcher eine unbekannte Kapazität besitzt.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pictures/a4-2-pratik.png}
+    \caption{Implementierter Stromkreis von Aufgabe 4.2}
+    \label{fig:implementierung-aufgabe-4-2}
+\end{figure}
+
+Im nachfolgendem Text wird der Programmcode der Aufgabe erläutert.
+Einzelne Teile des Codes werden ausgewählt und beschrieben.
+Am Ende dieser Sektion befindet sich der vollständige Programmcode.
+
+\begin{lstlisting}[language=C,label={lst:a4-2-preprozessor-anweisung}, caption={Preprozessoranweisung}]
+#include <math.h>
+\end{lstlisting}
+
+In Listing \ref{lst:a4-2-preprozessor-anweisung} wurde eine Preprozessoranweisung verwendet.
+Diese fügt eine C-Bibliothek hinzu, die verschiedene mathematische Funktionen zur Verfügung stellt.
+Die Funktion die in dieser Aufgabe verwendet wurde, ist die $log()$ Funktion.
+Es werden außerdem die selben Konstanten wie in Listing \ref{lst:a4-1-konstanten} verwendet.
+
+\begin{lstlisting}[language=C,label={lst:a4-2-programloop}, caption={Programmschleife}]
+double c = 0.0;
+
+void loop()
+{
+  int value = analogRead(PIN_VOLTAGE);
+  double u_a = value * RESOLUTION;
+
+  if (u_a < 3.6) {
+    double t = (double)millis() / 1000.0;
+    if (u_a > 0) {
+    	c = -t / (log(1 - (u_a / U_IN)) * RESISTOR);
+        Serial.print(c, 6);
+        Serial.println(" F");
+    }
+  }
+}
+\end{lstlisting}
+
+Im Listing \ref{lst:a4-2-programloop} wird nun die Kapazität berechnet.
+Dafür wird zusätzlich zum Wert des Pins A0 die vergangene Zeit miteinbezogen.
+Die Berechnung der Kapazität ergibt sich aus folgender Überlegung.
+
+Die Formel der Spannung eines Kondensators ist gegeben durch:
+
+\begin{align}
+    U_c(t) = U * (1 - e^{\frac{-t}{RC}})
+\end{align}
+
+Durch Umformen kann auf die Kapazität C umgeformt werden.
+
+\begin{align}
+    U_c(t) = U * (1 - e^{\frac{-t}{RC}}) \Rightarrow \\
+    \frac{U_c(t)}{U} - 1 = -e^{\frac{-t}{RC}} \Rightarrow \\
+    ln(1 - \frac{U_c(t)}{U}) = \frac{-t}{RC} \Rightarrow \\
+    \frac{log_{10}(1 - \frac{U_c(t)}{U}) R}{-t} = \frac{1}{C} \Rightarrow \\
+    C = \frac{-t}{log_{10}(1 - \frac{ U_c(t)}{U}) R}
+\end{align}
+
+Um ein akkurates Ergebnis zu erhalten, wird die Formel under den folgenden Bedingungen verwendet.
+Die Spannung am Kondensator $u\_a$ muss unter $3,6V$ betragen, aber höher als $0V$ sein.
+Letztere Bedingung wurde gewählt, da ansonsten eine Division durch $0$ möglich wäre.
+Erstere, da beim Testen des Programms festgestellt wurde, dass die errechnete Kapazität mit fortschreitender Zeit ungenauer, bzw.\ falsch wurde.
+Der in Listing \ref{lst:a4-2-programloop} verwendete Wert von $3,6V$ wurde verwendet, da dieser in der Ausgabe am Monitor den genauesten Wert zu liefern schien.
+
+\begin{lstlisting}[language=C,label={lst:a4-2-programmcode}, caption={Vollständiger Programmcode der Aufgabe 4.2}]
+#include <math.h>
+
+const int PIN_VOLTAGE = A0;
+
+const double U_IN = 5;
+const double RESOLUTION = U_IN / 1024;
+const double RESISTOR = 10 * 1000;
+
+double c = 0.0;
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int value = analogRead(PIN_VOLTAGE);
+  double u_a = value * RESOLUTION;
+
+  if (u_a < 3.6) {
+    double t = (double)millis() / 1000.0;
+    if (u_a > 0) {
+    	c = -t / (log(1 - (u_a / U_IN)) * RESISTOR);
+        Serial.print(c, 6);
+        Serial.println(" F");
+    }
+  }
+}
+\end{lstlisting}
+
 \subsection{Fehlerdiskussion}
 \label{subsec:a4-fehlerdiskussion}
+
+Für die Berechnung der Kapazität wurde zuerst die Überlegung aus (33) verwendet.
+Die Verwendung dieser Formel führte jedoch zu unbefriedigenden Messungen und wurde mit der Überlegung aus (47) ersetzt.
+Diese führte ebenso zu unbefriedigenden, jedoch genaueren Werten als (33).
+Erst als das Limit von $u\_a < 3,6$ eingeführt wurde, wurden befriedigende Messergebnisse erzielt.
+Womöglich könnte mit dieser Einschränkung auch mit (33) ein gleich gutes Ergebnis erreicht werden.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{pictures/Kondensator-Ladekurve.png}
+    \caption{Lade- und Entladekurve eines Kondensator \cite{kondesator}}
+    \label{fig:lade-entladekurve-kondensator}
+\end{figure}
+
+Des weiteren wurde der Wert von $3,6V$ für die Obergrenze von $u\_a$ durch experimentieren, d.h., willkürlich, festgelegt.
+Nachdem der Wert von $3,6$ nahe an $0,63U = 0,63*5V = 3,15V$ liegt, ist es naheliegend das ein weniger willkürlicher Wert $3,15V$ sein könnte.
+Dieser Wert ergibt sich aus der Spannung am Kondesator nach dem er $1\tau$ lang, siehe Abbildung \ref{fig:lade-entladekurve-kondensator}, geladen wurde.
 
 \subsection{Zusammenfassung}
 \label{subsec:a4-zusammenfassung2}
