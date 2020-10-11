@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  11 OCT 2020 14:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.9)  11 OCT 2020 18:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -499,7 +499,9 @@ File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-2.aux)
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-3.aux)
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-4.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.aux))
+(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.aux)
+(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.aux)
+(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
@@ -783,18 +785,29 @@ ator-Ladekurve.png>]
 [49
 
 
+] (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.tex
+Overfull \hbox (12.70142pt too wide) in paragraph at lines 1--1
+[]\OT1/cmr/bx/n/14.4 Aufgabe 6 - Mo-tor-steue-rung mit N[]ahreungssensor 
+ []
+
+) [50
+
+
+] (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.tex) [51
+
+
 ]
-/home/michael/IdeaProjects/ElektronikProtokoll/src/main.tex:70: Illegal paramet
+/home/michael/IdeaProjects/ElektronikProtokoll/src/main.tex:74: Illegal paramet
 er number in definition of \abx@field@howpublished.
 <to be read again> 
                    E
-l.70 \end
+l.74 \end
          {document}
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-[50
+[52
 
 ] (/home/michael/IdeaProjects/ElektronikProtokoll/src/main.aux
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/general.aux)
@@ -802,14 +815,16 @@ are all screwed up? I'm going to assume that you meant ##.
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-2.aux)
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-3.aux)
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-4.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.aux))
+(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.aux)
+(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.aux)
+(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.aux))
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 13963 strings out of 480478
- 236120 string characters out of 5905960
- 1021012 words of memory out of 5000000
- 29778 multiletter control sequences out of 15000+600000
+ 13997 strings out of 480478
+ 237493 string characters out of 5905960
+ 1026931 words of memory out of 5000000
+ 29798 multiletter control sequences out of 15000+600000
  538590 words of font info for 46 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  40i,20n,57p,814b,2913s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -828,10 +843,10 @@ pe1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/
 line10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
 Output written on /home/michael/IdeaProjects/ElektronikProtokoll/src/main.pdf (
-50 pages, 1381130 bytes).
+52 pages, 1383745 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 357 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

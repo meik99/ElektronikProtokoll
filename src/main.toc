@@ -97,4 +97,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.5}Zusammenfassung}{49}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{50}%
+\contentsline {section}{\numberline {9}Aufgabe 6 - Motorsteuerung mit Nähreungssensor}{50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}Materialien}{50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}Vorbereitung}{50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}Praktikumsaufgabe}{50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.4}Fehlerdiskussion}{50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.5}Zusammenfassung}{50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Aufgabe 7 - Datenübertragung mittels Infra-Rot (IR)}{51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1}Materialien}{51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.2}Vorbereitung}{51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.3}Praktikumsaufgabe}{51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.4}Fehlerdiskussion}{51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5}Zusammenfassung}{51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{52}%
