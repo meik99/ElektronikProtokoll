@@ -1,8 +1,64 @@
 \section{Aufgabe 6 - Motorsteuerung mit Nähreungssensor}
-\label{sec:aufgabe-6---motorsteuerung-mit-nähreungssensor}
+\label{sec:aufgabe-6---motorsteuerung-mit-naehreungssensor}
+
+In dieser Aufgabe soll mithilfe ein Motor angesteuert werden.
+Um die Geschwindigkeit des Motors zu steuern, wird eine Regulierung mittels PWM-Signal realisiert.
+Der Motor soll weiters auf einen Ultraschallsensor reagieren, welche die Entfernung zu Objekten misst.
+Nähert sich ein Objekt auf weniger als 30cm, so soll der Motor ausgeschaltet, bzw.\ seine Geschwindigkeit auf 0 reduziert, werden.
+Eine 7-Segment Anzeige soll die derzeitige Geschwindigkeitsstufe des Motors anzeigen und mittels Schieberegister gesteuert werden.
+
+Zwei Taster sollen einerseits die Laufrichtung des Motors und andererseits die Geschwindigkeit ändern.
+Wird Taster A betätigt, soll sich die Geschwindigkeit, mit der sich der Motor gegen den Uhrzeigersinn dreht, um eins erhöht werden.
+Dreht sich der Motor bei Betätigung des Tasters im Uhrzeigersinn, so wird die Laufrichtung und Geschwindikeit entsprechend geändert.
+Wird Taster B gedrückt, soll das selbe Verhalten für die andere Laufrichtung implementiert werden.
+
+Die Geschwindikeiten sollen hierbei zwischengespeichert und wiederhergestellt werden.
+Es soll daher das folgende Beispiel möglich sein.
+
+\begin{itemize}
+    \item Motor dreht sich mit Geschwindigkeit 3 im Uhrzeigersinn
+    \item Taster A wird betätigt
+    \item Motor dreht sich mit Geschwindigkeit 1 gegen den Uhrzeigersinn
+    \item Taster A wird betätigt
+    \item Motor dreht sich mit Geschwindigkeit 2 gegen den Uhrzeigersinn
+    \item Taster B wird betätigt
+    \item Motor dreht sich mit Geschwindigkeit 4 im Uhrzeigersinn
+    \item Taster B wird betätigt
+    \item Motor dreht sich mit Geschwindigkeit 5 im Uhrzeigersinn
+    \item Taster A wird betätigt
+    \item Motor dreht sich mit Geschwindigkeit 3 gegen den Uhrzeigersinn
+\end{itemize}
+
+Würde die Geschwindigkeit mittels Tastendruck auf $> 9$ gebracht werden wird sie wieder auf 0 zurückgesetzt.
 
 \subsection{Materialien}
 \label{subsec:a6-materialien}
+
+\begin{table}[h]
+    \centering
+    \caption{Aufgabe 5 - Verwendete Materialien}
+    \label{tab:a5-materialien}
+    \begin{tabular}{| l | l | l |}
+        \hline
+        Bezeichnung & Eigenschaften & Menge \\
+        \hline
+        7-Segement Anzeige & & 1 \\
+        Ultraschallsensor & HC-SR04 & 1 \\
+        Schieberegister & 74HC595 & 1 \\
+        Taster & 4 Polig & 2\\
+        Motortreiber & L293D & 1 \\
+        LED & Rot & 1 \\
+        LED & Grün & 1 \\
+        Widerstand & $150\Omega$ & 10 \\
+        & Braun - Grün - Braun - Gold & \\
+        Widerstand & $10k\Omega$ & 2 \\
+        & Braun - Schwarz - Orange - Gold & \\
+        Diode & & 2 \\
+        DC-Motor & & 1 \\
+        Mikrocontroller & Arduino Uno R3 & 1 \\
+        \hline
+    \end{tabular}
+\end{table}
 
 \subsection{Vorbereitung}
 \label{subsec:a6-vorbereitung}

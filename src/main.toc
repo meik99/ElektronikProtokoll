@@ -1,132 +1,138 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {german}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Einleitung}{5}%
+\contentsline {section}{\numberline {1}Einleitung}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Verwendete Materialien}{5}%
+\contentsline {section}{\numberline {2}Verwendete Materialien}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}LED}{5}%
+\contentsline {subsection}{\numberline {2.1}LED}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Widerstände}{5}%
+\contentsline {subsection}{\numberline {2.2}Widerstände}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Taster}{6}%
+\contentsline {subsection}{\numberline {2.3}Taster}{7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Mikrocontroller \cite {arduino-r3}}{6}%
+\contentsline {subsection}{\numberline {2.4}Mikrocontroller \cite {arduino-r3}}{7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Logikbausteine}{7}%
+\contentsline {subsection}{\numberline {2.5}Logikbausteine}{8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}Kondensatoren}{7}%
+\contentsline {subsection}{\numberline {2.6}Kondensatoren}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Operationsverstärker}{7}%
+\contentsline {subsection}{\numberline {2.7}Operationsverstärker}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Begriffe}{7}%
+\contentsline {subsection}{\numberline {2.8}Motortreiber}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Pulsewellenmodulation (PWM)}{7}%
+\contentsline {subsection}{\numberline {2.9}Ultraschallsensor}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}PullUp}{7}%
+\contentsline {subsection}{\numberline {2.10}7-Segment Anzeige}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Baudrate}{7}%
+\contentsline {section}{\numberline {3}Begriffe}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Wahrheitstabelle}{7}%
+\contentsline {subsection}{\numberline {3.1}Pulsewellenmodulation (PWM)}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Aufgabe 1 - Ampelsteuerung}{8}%
+\contentsline {subsection}{\numberline {3.2}PullUp}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Materialien}{8}%
+\contentsline {subsection}{\numberline {3.3}Baudrate}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Vorbereitung}{8}%
+\contentsline {subsection}{\numberline {3.4}Wahrheitstabelle}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Praktikumsaufgabe}{10}%
+\contentsline {section}{\numberline {4}Aufgabe 1 - Ampelsteuerung}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Fehlerdiskussion}{14}%
+\contentsline {subsection}{\numberline {4.1}Materialien}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Zusammenfassung}{14}%
+\contentsline {subsection}{\numberline {4.2}Vorbereitung}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Aufgabe 2 - Reaktionsspiel}{15}%
+\contentsline {subsection}{\numberline {4.3}Praktikumsaufgabe}{12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Materialien}{15}%
+\contentsline {subsection}{\numberline {4.4}Fehlerdiskussion}{16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Vorbereitung}{16}%
+\contentsline {subsection}{\numberline {4.5}Zusammenfassung}{16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Praktikumsaufgabe}{16}%
+\contentsline {section}{\numberline {5}Aufgabe 2 - Reaktionsspiel}{17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Fehlerdiskussion}{27}%
+\contentsline {subsection}{\numberline {5.1}Materialien}{17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5}Zusammenfassung}{27}%
+\contentsline {subsection}{\numberline {5.2}Vorbereitung}{18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Aufgabe 3 - Realisierung eines Logic Analyzers}{28}%
+\contentsline {subsection}{\numberline {5.3}Praktikumsaufgabe}{18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Materialien}{28}%
+\contentsline {subsection}{\numberline {5.4}Fehlerdiskussion}{29}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Vorbereitung}{28}%
+\contentsline {subsection}{\numberline {5.5}Zusammenfassung}{29}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Praktikumsaufgabe}{28}%
+\contentsline {section}{\numberline {6}Aufgabe 3 - Realisierung eines Logic Analyzers}{30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}Fehlerdiskussion}{35}%
+\contentsline {subsection}{\numberline {6.1}Materialien}{30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5}Zusammenfassung}{35}%
+\contentsline {subsection}{\numberline {6.2}Vorbereitung}{30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Aufgabe 4 - Wertbestimmung von Widerstand und Kondensator}{36}%
+\contentsline {subsection}{\numberline {6.3}Praktikumsaufgabe}{30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Materialien}{36}%
+\contentsline {subsection}{\numberline {6.4}Fehlerdiskussion}{37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Vorbereitung}{37}%
+\contentsline {subsection}{\numberline {6.5}Zusammenfassung}{37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.1}Aufgabe 1}{37}%
+\contentsline {section}{\numberline {7}Aufgabe 4 - Wertbestimmung von Widerstand und Kondensator}{38}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.2}Aufgabe 2}{37}%
+\contentsline {subsection}{\numberline {7.1}Materialien}{38}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.3}Aufgabe 3}{40}%
+\contentsline {subsection}{\numberline {7.2}Vorbereitung}{39}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Praktikumsaufgabe}{42}%
+\contentsline {subsubsection}{\numberline {7.2.1}Aufgabe 1}{39}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.1}Aufgabe 1}{42}%
+\contentsline {subsubsection}{\numberline {7.2.2}Aufgabe 2}{39}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.2}Aufgabe 2}{44}%
+\contentsline {subsubsection}{\numberline {7.2.3}Aufgabe 3}{42}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4}Fehlerdiskussion}{47}%
+\contentsline {subsection}{\numberline {7.3}Praktikumsaufgabe}{44}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5}Zusammenfassung}{48}%
+\contentsline {subsubsection}{\numberline {7.3.1}Aufgabe 1}{44}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Aufgabe 5 - Ansteuerung eines Lautsprechers}{49}%
+\contentsline {subsubsection}{\numberline {7.3.2}Aufgabe 2}{46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Materialien}{49}%
+\contentsline {subsection}{\numberline {7.4}Fehlerdiskussion}{49}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Vorbereitung}{49}%
+\contentsline {subsection}{\numberline {7.5}Zusammenfassung}{50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.2.1}Aufgabe 1}{49}%
+\contentsline {section}{\numberline {8}Aufgabe 5 - Ansteuerung eines Lautsprechers}{51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.2.2}Aufgabe 2}{54}%
+\contentsline {subsection}{\numberline {8.1}Materialien}{51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.2.3}Aufgabe 3}{54}%
+\contentsline {subsection}{\numberline {8.2}Vorbereitung}{51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3}Praktikumsaufgabe}{55}%
+\contentsline {subsubsection}{\numberline {8.2.1}Aufgabe 1}{51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4}Fehlerdiskussion}{60}%
+\contentsline {subsubsection}{\numberline {8.2.2}Aufgabe 2}{56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5}Zusammenfassung}{60}%
+\contentsline {subsubsection}{\numberline {8.2.3}Aufgabe 3}{56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Aufgabe 6 - Motorsteuerung mit Nähreungssensor}{61}%
+\contentsline {subsection}{\numberline {8.3}Praktikumsaufgabe}{57}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Materialien}{61}%
+\contentsline {subsection}{\numberline {8.4}Fehlerdiskussion}{62}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Vorbereitung}{61}%
+\contentsline {subsection}{\numberline {8.5}Zusammenfassung}{62}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Praktikumsaufgabe}{61}%
+\contentsline {section}{\numberline {9}Aufgabe 6 - Motorsteuerung mit Nähreungssensor}{63}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Fehlerdiskussion}{61}%
+\contentsline {subsection}{\numberline {9.1}Materialien}{64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.5}Zusammenfassung}{61}%
+\contentsline {subsection}{\numberline {9.2}Vorbereitung}{64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Aufgabe 7 - Datenübertragung mittels Infra-Rot (IR)}{62}%
+\contentsline {subsection}{\numberline {9.3}Praktikumsaufgabe}{64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Materialien}{62}%
+\contentsline {subsection}{\numberline {9.4}Fehlerdiskussion}{64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2}Vorbereitung}{62}%
+\contentsline {subsection}{\numberline {9.5}Zusammenfassung}{64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3}Praktikumsaufgabe}{62}%
+\contentsline {section}{\numberline {10}Aufgabe 7 - Datenübertragung mittels Infra-Rot (IR)}{65}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4}Fehlerdiskussion}{62}%
+\contentsline {subsection}{\numberline {10.1}Materialien}{65}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.5}Zusammenfassung}{62}%
+\contentsline {subsection}{\numberline {10.2}Vorbereitung}{65}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{63}%
+\contentsline {subsection}{\numberline {10.3}Praktikumsaufgabe}{65}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.4}Fehlerdiskussion}{65}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5}Zusammenfassung}{65}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{66}%
