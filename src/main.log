@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.14)  17 OCT 2020 14:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.14)  17 OCT 2020 18:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -569,21 +569,21 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/main.bbl
-/home/michael/IdeaProjects/ElektronikProtokoll/src/main.bbl:108: Illegal parame
+/home/michael/IdeaProjects/ElektronikProtokoll/src/main.bbl:131: Illegal parame
 ter number in definition of \NewValue.
 <to be read again> 
                    E
-l.108 ...i/Leuchtdiode#Elektrische_Eigenschaften}}
+l.131 ...i/Leuchtdiode#Elektrische_Eigenschaften}}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-/home/michael/IdeaProjects/ElektronikProtokoll/src/main.bbl:110: Illegal parame
+/home/michael/IdeaProjects/ElektronikProtokoll/src/main.bbl:133: Illegal parame
 ter number in definition of \abx@field@howpublished.
 <to be read again> 
                    E
-l.110     \endentry
+l.133     \endentry
                    
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -927,8 +927,17 @@ File: pictures/a7-praktik.png Graphic file (type png)
 <use pictures/a7-praktik.png>
 Package pdftex.def Info: pictures/a7-praktik.png  used on input line 139.
 (pdftex.def)             Requested size: 360.0pt x 206.80447pt.
-) [79] [80 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a7-prak
-tik.png (PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[79] [80 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a7-prakti
+k.png (PNG copy)>] [81]
+Overfull \hbox (2.53665pt too wide) in paragraph at lines 245--247
+\OT1/cmr/m/n/10.95 Schlei-fe selbst liest nur einen Buch-sta-ben vom se-ri-el-l
+en In-ter-face und []ubergibt
+ []
+
+[82] [83] [84] [85] [86] [87] [88]) [89]
 Overfull \hbox (57.65706pt too wide) in paragraph at lines 75--75
 []\OT1/cmr/m/n/10.95 KT-Elektronic. \OT1/cmr/m/it/10.95 Ul-tra-schall Messmo-du
 l HC-SR04\OT1/cmr/m/n/10.95 . $\OT1/cmtt/m/n/10.95 https : / / www . mikrocontr
@@ -951,7 +960,7 @@ You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-[81
+[90
 
 ] (/home/michael/IdeaProjects/ElektronikProtokoll/src/main.aux
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/general.aux)
@@ -962,16 +971,13 @@ are all screwed up? I'm going to assume that you meant ##.
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.aux)
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.aux)
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 14332 strings out of 480478
- 243235 string characters out of 5905958
- 1027865 words of memory out of 5000000
- 30109 multiletter control sequences out of 15000+600000
+ 14373 strings out of 480478
+ 243944 string characters out of 5905958
+ 1050941 words of memory out of 5000000
+ 30150 multiletter control sequences out of 15000+600000
  540446 words of font info for 54 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  40i,20n,57p,814b,2913s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -992,10 +998,10 @@ onts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10
 e/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texmf-
 dist/fonts/type1/public/cm-super/sfrm1095.pfb>
 Output written on /home/michael/IdeaProjects/ElektronikProtokoll/src/main.pdf (
-81 pages, 1976198 bytes).
+90 pages, 1999279 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
+ 499 PDF objects out of 1000 (max. 8388607)
+ 320 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
