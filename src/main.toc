@@ -117,22 +117,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.2}Vorbereitung}{64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Praktikumsaufgabe}{64}%
+\contentsline {subsubsection}{\numberline {9.2.1}Aufgabe 1}{64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Fehlerdiskussion}{64}%
+\contentsline {subsubsection}{\numberline {9.2.2}Aufgabe 2}{65}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.5}Zusammenfassung}{64}%
+\contentsline {subsubsection}{\numberline {9.2.3}Aufgabe 3}{65}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Aufgabe 7 - Datenübertragung mittels Infra-Rot (IR)}{65}%
+\contentsline {subsection}{\numberline {9.3}Praktikumsaufgabe}{66}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Materialien}{65}%
+\contentsline {subsection}{\numberline {9.4}Fehlerdiskussion}{75}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2}Vorbereitung}{65}%
+\contentsline {subsection}{\numberline {9.5}Zusammenfassung}{75}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3}Praktikumsaufgabe}{65}%
+\contentsline {section}{\numberline {10}Aufgabe 7 - Datenübertragung mittels Infra-Rot (IR)}{76}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4}Fehlerdiskussion}{65}%
+\contentsline {subsection}{\numberline {10.1}Materialien}{76}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.5}Zusammenfassung}{65}%
+\contentsline {subsection}{\numberline {10.2}Vorbereitung}{76}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{66}%
+\contentsline {subsection}{\numberline {10.3}Praktikumsaufgabe}{76}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.4}Fehlerdiskussion}{76}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5}Zusammenfassung}{76}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{77}%

@@ -41,6 +41,28 @@
       \field{howpublished}{\url{https://store.arduino.cc/arduino-uno-rev3}}
       \field{title}{Arduino Uno Rev 3}
     \endentry
+    \entry{ultraschallsensor}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c437917e0da74f5d9cd38b3d6d69e2bf}{%
+           family={{KT-Elektronic}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {mikrocontroller.net}%
+      }
+      \strng{namehash}{c437917e0da74f5d9cd38b3d6d69e2bf}
+      \strng{fullhash}{c437917e0da74f5d9cd38b3d6d69e2bf}
+      \strng{bibnamehash}{c437917e0da74f5d9cd38b3d6d69e2bf}
+      \strng{authorbibnamehash}{c437917e0da74f5d9cd38b3d6d69e2bf}
+      \strng{authornamehash}{c437917e0da74f5d9cd38b3d6d69e2bf}
+      \strng{authorfullhash}{c437917e0da74f5d9cd38b3d6d69e2bf}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.mikrocontroller.net/attachment/218122/HC-SR04_ultraschallmodul_beschreibung_3.pdf}}
+      \field{title}{Ultraschall Messmodul HC-SR04}
+    \endentry
     \entry{kondesator}{misc}{}
       \name{author}{1}{}{%
         {{hash=49cf52b8dd94f556ccdbfd837f281823}{%
