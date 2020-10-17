@@ -2186,6 +2186,7 @@
     <bcf:citekey order="3">arduino-r3</bcf:citekey>
     <bcf:citekey order="4">kondesator</bcf:citekey>
     <bcf:citekey order="5">ultraschallsensor</bcf:citekey>
+    <bcf:citekey order="6">morsecode</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

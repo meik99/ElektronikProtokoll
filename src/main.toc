@@ -135,10 +135,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.2}Vorbereitung}{76}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3}Praktikumsaufgabe}{76}%
+\contentsline {subsubsection}{\numberline {10.2.1}Aufgabe 1}{76}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4}Fehlerdiskussion}{76}%
+\contentsline {subsubsection}{\numberline {10.2.2}Aufgabe 2}{77}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.5}Zusammenfassung}{76}%
+\contentsline {subsubsection}{\numberline {10.2.3}Aufgabe 3}{78}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{77}%
+\contentsline {subsection}{\numberline {10.3}Praktikumsaufgabe}{79}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.4}Fehlerdiskussion}{79}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5}Zusammenfassung}{79}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{80}%
