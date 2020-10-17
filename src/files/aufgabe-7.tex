@@ -130,15 +130,331 @@ Der errechnete Vorwiderstand beträgt $12,154\Omega$, daher wird der $10\Omega$ 
 \label{subsec:a7-praktikumsaufgabe}
 
 In Abbildung \ref{fig:a6-implementierung} ist die implementierte Schaltung abgebildet.
-
+Links ist der sendende Mikrocontroller, rechts der Empfangende platziert.
+Der Pin 11 wurde bei beidem als Aus- bzw.\ Eingang verwendet, da dieser PWM-Modulation unterstützt.
+Die PWM-Unterstützung ist hier nicht notwendig, mehr dazu in der Fehlerdiskussion.
 
 \begin{figure}
     \centering
-    \includegraphics{pictures/a7-praktik.png}
+    \includegraphics[width=\textwidth]{pictures/a7-praktik.png}
     \caption{Implementierte Schaltung für Aufgabe 7}
     \label{fig:a7-implementierung}
 \end{figure}
 
+Im nachfolgenden Text wird der Programmcode der Aufgabe erläutert.
+Einzelne Teile des Codes werden ausgewählt und beschrieben.
+Am Ende der jeweiligen Sektionen befinden sich die vollständigen Programmcodes des Senders und des Empfängers.
+
+\subsubsection{Sender}
+
+\begin{lstlisting}[language=C,label={lst:a7-sender-wichtige-konstanten}, caption={Wichtige Konstanten des Senders}]
+const unsigned long DURATION = 25;
+
+const int PIN_SENDER = 11;
+
+/*
+1 - short
+3 - long
+-1 - NOP
+
+NOP is needed since it's complex to work with jagged arrays in C
+*/
+const int CODE[26][4] = {
+  {1, 3, -1, -1}, 	// A
+  {3, 1, 1, 1}, 	// B
+  {3, 1, 3, 1},		// C
+  {3, 1, 1, -1},	// D
+  {1, -1, -1, -1}, 	// E
+  {1, 1, 3, 1}, 	// F
+  {3, 3, 1, -1}, 	// G
+  {1, 1, 1, 1}, 	// H
+  {1, 1, -1, -1}, 	// I
+  {1, 3, 3, 3}, 	// J
+  {3, 1, 3, -1}, 	// K
+  {1, 3, 1, 1}, 	// L
+  {3, 3, -1, -1},	// M
+  {3, 1, -1, -1}, 	// N
+  {3, 3, 3, -1}, 	// O
+  {1, 3, 3, 1}, 	// P
+  {3, 3, 1, 3}, 	// Q
+  {1, 3, 1, -1},	// R
+  {1, 1, 1, -1}, 	// S
+  {3, -1, -1, -1}, 	// T
+  {1, 1, 3, -1}, 	// U
+  {1, 1, 1, 3}, 	// V
+  {1, 3, 3, -1}, 	// W
+  {3, 1, 1, 3}, 	// X
+  {3, 1, 3, 3}, 	// Y
+  {3, 3, 1, 1}, 	// Z
+};
+
+const int OFFSET = 'A';
+\end{lstlisting}
+
+In Listing \ref{lst:a7-sender-wichtige-konstanten} werden die verwendeten Konstanten gezeigt.
+Die Konstante $DURATION$ wird verwendet, um die Zeit für dits und dahs zu berechnen.
+In der $CODE$ Matrix ist die Kodierung von Buchstaben zu Morsecode abgebildet.
+Dabei werden dits mit 1 und dahs mit 3 beschrieben.
+In C ist ein jagged Array, d.h.\ ein Array, bei dem die Zeilen unterschiedliche Längen haben, nicht trivial zu erstellen.
+Daher werden nicht verwendete Positionen mit -1 angegeben.
+Die Konstante $OFFSET$ speichert den ASCII-Wert des Buchstaben 'A'.
+
+\begin{lstlisting}[language=C,label={lst:a7-sender-schleife}, caption={Programmschleife des Senders}]
+
+void loop()
+{
+  if(Serial.available()) {
+    send_letter(Serial.read());
+  }
+}
+
+bool send_letter(char letter) {
+  if (letter >= 'a' && letter <= 'z') {
+    // If letter is lower case, set to uppercase
+    letter -= 32;
+  } else if (letter < 'A' || letter > 'Z') {
+    return false;
+  }
+
+  Serial.println(letter);
+  // Normalize to 0 - 25;
+  int index = letter - 'A';
+  for (int i = 0; i < 4; i++) {
+    int multiplier = CODE[index][i];
+
+    if (CODE[index][i] > -1) {
+      digitalWrite(PIN_SENDER, HIGH);
+      delay(DURATION * multiplier);
+      digitalWrite(PIN_SENDER, LOW);
+      delay(DURATION);
+    } else {
+      digitalWrite(PIN_SENDER, HIGH);
+      delay(DURATION * 4);
+      digitalWrite(PIN_SENDER, LOW);
+      delay(DURATION);
+      // Exit loop after end of code
+      break;
+    }
+  }
+
+  digitalWrite(PIN_SENDER, LOW);
+  return true;
+}
+\end{lstlisting}
+
+Die Programmschleife samt Hilfsmethode ist in Listing \ref{lst:a7-sender-schleife} dargestellt.
+Die Schleife selbst liest nur einen Buchstaben vom seriellen Interface und übergibt diesen an die Funktion $send\_letter$.
+
+Im ersten Teil der Hilfsmethode wird zuerst überprüft, ob der Buchstabe ein Kleinbuchstabe ist.
+Ist dies der Fall, wird er zu einem Großbuchstaben umgewandelt.
+Die Umwandlung wird durch Subtraktion des Unterschieds zwischen dem ASCII-Wert von 'a' und 'A' durchgeführt.
+Sollte der Buchstabe weder ein Klein- noch ein Großbuchstabe sein, wird die Routine beendet.
+
+Danach wird der benötigte Index der Kodierungsmatrix berechnet, indem vom ASCII-Wert des übergeben Buchstaben der Wert von 'A' abgezogen wird.
+Dies normalisiert den Wert auf den Bereich $0 \leq index < 26$.
+Die Zeile am entsprechenden Index wird sodann durchiteriert.
+Ist der gespeicherte Wert an der Stelle $[index][i]$ größer als der definierte Platzhalter von -1, wird ein Morsecode gesendet.
+Der Wert der Matrix dient dazu als Multiplikator der Zeitspanne, für die ein $HIGH$-Signal an Pin 11 angelegt wird.
+Wird das Ende der Zeile, d.h.\ -1, erreicht, wird ein $HIGH$-Signal für die Zeit von $4*DURATIOn$ angegelegt, um das Ende des Signals zu markieren.
+Abschließend wird die Schleife beendet und Pin 11 auf $LOW$ geschaltet.
+
+\begin{lstlisting}[language=C,label={lst:a7-sender-programmcode}, caption={Vollständiger Programmcode des Senders der Aufgabe 7}]
+const unsigned long DURATION = 25;
+
+const int PIN_SENDER = 11;
+
+/*
+1 - short
+3 - long
+-1 - NOP
+
+NOP is needed since it's complex to work with jagged arrays in C
+*/
+const int CODE[26][4] = {
+  {1, 3, -1, -1}, 	// A
+  {3, 1, 1, 1}, 	// B
+  {3, 1, 3, 1},		// C
+  {3, 1, 1, -1},	// D
+  {1, -1, -1, -1}, 	// E
+  {1, 1, 3, 1}, 	// F
+  {3, 3, 1, -1}, 	// G
+  {1, 1, 1, 1}, 	// H
+  {1, 1, -1, -1}, 	// I
+  {1, 3, 3, 3}, 	// J
+  {3, 1, 3, -1}, 	// K
+  {1, 3, 1, 1}, 	// L
+  {3, 3, -1, -1},	// M
+  {3, 1, -1, -1}, 	// N
+  {3, 3, 3, -1}, 	// O
+  {1, 3, 3, 1}, 	// P
+  {3, 3, 1, 3}, 	// Q
+  {1, 3, 1, -1},	// R
+  {1, 1, 1, -1}, 	// S
+  {3, -1, -1, -1}, 	// T
+  {1, 1, 3, -1}, 	// U
+  {1, 1, 1, 3}, 	// V
+  {1, 3, 3, -1}, 	// W
+  {3, 1, 1, 3}, 	// X
+  {3, 1, 3, 3}, 	// Y
+  {3, 3, 1, 1}, 	// Z
+};
+
+const int OFFSET = 'A';
+
+void setup()
+{
+  Serial.begin(115000);
+  pinMode(PIN_SENDER, OUTPUT);
+}
+
+void loop()
+{
+  if(Serial.available()) {
+    send_letter(Serial.read());
+  }
+}
+
+bool send_letter(char letter) {
+  if (letter >= 'a' && letter <= 'z') {
+    // If letter is lower case, set to uppercase
+    letter -= 32;
+  } else if (letter < 'A' || letter > 'Z') {
+    return false;
+  }
+
+  Serial.println(letter);
+  // Normalize to 0 - 25;
+  int index = letter - 'A';
+  for (int i = 0; i < 4; i++) {
+    int multiplier = CODE[index][i];
+
+    if (CODE[index][i] > -1) {
+      digitalWrite(PIN_SENDER, HIGH);
+      delay(DURATION * multiplier);
+      digitalWrite(PIN_SENDER, LOW);
+      delay(DURATION);
+    } else {
+      digitalWrite(PIN_SENDER, HIGH);
+      delay(DURATION * 4);
+      digitalWrite(PIN_SENDER, LOW);
+      delay(DURATION);
+      // Exit loop after end of code
+      break;
+    }
+  }
+
+  digitalWrite(PIN_SENDER, LOW);
+  return true;
+}
+\end{lstlisting}
+
+\subsubsection{Empfänger}
+
+\begin{lstlisting}[language=C,label={lst:a7-receiver-programmcode}, caption={Vollständiger Programmcode des Empfängers der Aufgabe 7}]
+const unsigned long DURATION = 25;
+const unsigned long DURATION_THRESHOLD = 5;
+
+const int PIN_RECEIVER = 11;
+
+/*
+1 - short
+2 - long
+-1 - NOP
+
+NOP is needed since it's complex to work with jagged arrays in C
+*/
+const int CODE[26][4] = {
+  {1, 3, -1, -1}, 	// A
+  {3, 1, 1, 1}, 	// B
+  {3, 1, 3, 1},		// C
+  {3, 1, 1, -1},	// D
+  {1, -1, -1, -1}, 	// E
+  {1, 1, 3, 1}, 	// F
+  {3, 3, 1, -1}, 	// G
+  {1, 1, 1, 1}, 	// H
+  {1, 1, -1, -1}, 	// I
+  {1, 3, 3, 3}, 	// J
+  {3, 1, 3, -1}, 	// K
+  {1, 3, 1, 1}, 	// L
+  {3, 3, -1, -1},	// M
+  {3, 1, -1, -1}, 	// N
+  {3, 3, 3, -1}, 	// O
+  {1, 3, 3, 1}, 	// P
+  {3, 3, 1, 3}, 	// Q
+  {1, 3, 1, -1},	// R
+  {1, 1, 1, -1}, 	// S
+  {3, -1, -1, -1}, 	// T
+  {1, 1, 3, -1}, 	// U
+  {1, 1, 1, 3}, 	// V
+  {1, 3, 3, -1}, 	// W
+  {3, 1, 1, 3}, 	// X
+  {3, 1, 3, 3}, 	// Y
+  {3, 3, 1, 1}, 	// Z
+};
+int current_code[4] = {};
+int current_code_index = 0;
+
+const int OFFSET = 65;
+
+int start_time = 0;
+
+void setup()
+{
+  Serial.begin(115000);
+  pinMode(PIN_RECEIVER, INPUT);
+}
+
+void loop()
+{
+  int value = digitalRead(PIN_RECEIVER);
+  if(value == LOW && start_time <= 0) {
+    start_time = millis();
+  } else if (value == HIGH && start_time > 0) {
+    unsigned long duration = millis() - start_time;
+    int decoded = decode(millis() - start_time);
+    start_time = 0;
+    if (decoded > -1) {
+      Serial.println((char)(decoded + OFFSET));
+    }
+  }
+}
+
+int decode(unsigned long duration) {
+  int result = -1;
+  if (duration > DURATION*4 - DURATION_THRESHOLD &&
+      duration < DURATION*4 + DURATION_THRESHOLD) {
+    current_code[current_code_index] = -1;
+    for(int i = 0; i < 26; i++) {
+      for(int j = 0; j < 4; j++) {
+        if(CODE[i][j] == current_code[j]) {
+          if(CODE[i][j] == -1) {
+            // Set result if codes match until end
+            result = i;
+          }
+        } else {
+          break;
+        }
+      }
+    }
+
+    // Reset code
+    for(int i = 0; i < 4; i++) {
+      current_code[i] = -1;
+    }
+    current_code_index = -1;
+  } else if (duration > DURATION*3 - DURATION_THRESHOLD &&
+      duration < DURATION*3 + DURATION_THRESHOLD) {
+    current_code[current_code_index] = 3;
+  } else if (duration > DURATION - DURATION_THRESHOLD &&
+      duration < DURATION + DURATION_THRESHOLD) {
+    current_code[current_code_index] = 1;
+  }
+  current_code_index++;
+
+  // Return -1 if encoding not possible
+  return result;
+}
+\end{lstlisting}
 
 \subsection{Fehlerdiskussion}
 \label{subsec:a7-fehlerdiskussion}

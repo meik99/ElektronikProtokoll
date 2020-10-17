@@ -143,8 +143,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.3}Praktikumsaufgabe}{79}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4}Fehlerdiskussion}{79}%
+\contentsline {subsubsection}{\numberline {10.3.1}Sender}{79}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.5}Zusammenfassung}{79}%
+\contentsline {subsubsection}{\numberline {10.3.2}Empfänger}{79}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{80}%
+\contentsline {subsection}{\numberline {10.4}Fehlerdiskussion}{80}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5}Zusammenfassung}{80}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{81}%

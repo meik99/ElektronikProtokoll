@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.14)  17 OCT 2020 05:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.14)  17 OCT 2020 14:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -916,7 +916,19 @@ Overfull \hbox (36.55519pt too wide) in paragraph at lines 101--102
  []
 
 [78 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a7-rechnung-vo
-rwiderstand.png>]) [79]
+rwiderstand.png>]
+Overfull \hbox (16.52957pt too wide) in paragraph at lines 132--136
+\OT1/cmr/m/n/10.95 wur-de bei bei-dem als Aus- bzw. Ein-gang ver-wen-det, da di
+e-ser PWM-Modulation
+ []
+
+<pictures/a7-praktik.png, id=397, 955.31906pt x 548.80031pt>
+File: pictures/a7-praktik.png Graphic file (type png)
+<use pictures/a7-praktik.png>
+Package pdftex.def Info: pictures/a7-praktik.png  used on input line 139.
+(pdftex.def)             Requested size: 360.0pt x 206.80447pt.
+) [79] [80 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a7-prak
+tik.png (PNG copy)>]
 Overfull \hbox (57.65706pt too wide) in paragraph at lines 75--75
 []\OT1/cmr/m/n/10.95 KT-Elektronic. \OT1/cmr/m/it/10.95 Ul-tra-schall Messmo-du
 l HC-SR04\OT1/cmr/m/n/10.95 . $\OT1/cmtt/m/n/10.95 https : / / www . mikrocontr
@@ -939,7 +951,7 @@ You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-[80
+[81
 
 ] (/home/michael/IdeaProjects/ElektronikProtokoll/src/main.aux
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/general.aux)
@@ -950,13 +962,16 @@ are all screwed up? I'm going to assume that you meant ##.
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.aux)
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.aux)
 (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 14325 strings out of 480478
- 243063 string characters out of 5905958
- 1027828 words of memory out of 5000000
- 30103 multiletter control sequences out of 15000+600000
+ 14332 strings out of 480478
+ 243235 string characters out of 5905958
+ 1027865 words of memory out of 5000000
+ 30109 multiletter control sequences out of 15000+600000
  540446 words of font info for 54 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  40i,20n,57p,814b,2913s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -977,10 +992,10 @@ onts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10
 e/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texmf-
 dist/fonts/type1/public/cm-super/sfrm1095.pfb>
 Output written on /home/michael/IdeaProjects/ElektronikProtokoll/src/main.pdf (
-80 pages, 1847677 bytes).
+81 pages, 1976198 bytes).
 PDF statistics:
- 466 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
+ 471 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
