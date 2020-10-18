@@ -2182,12 +2182,13 @@
     <bcf:datasource type="file" datatype="bibtex">main.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="2">led-elektrische-eigenschaften</bcf:citekey>
-    <bcf:citekey order="3">arduino-r3</bcf:citekey>
-    <bcf:citekey order="4">kondesator</bcf:citekey>
-    <bcf:citekey order="5">ultraschallsensor</bcf:citekey>
-    <bcf:citekey order="6">morsecode</bcf:citekey>
-    <bcf:citekey order="7">huffman</bcf:citekey>
+    <bcf:citekey order="3">led-elektrische-eigenschaften</bcf:citekey>
+    <bcf:citekey order="4">arduino-r3</bcf:citekey>
+    <bcf:citekey order="5">kondesator</bcf:citekey>
+    <bcf:citekey order="6">kondesator</bcf:citekey>
+    <bcf:citekey order="7">ultraschallsensor</bcf:citekey>
+    <bcf:citekey order="8">morsecode</bcf:citekey>
+    <bcf:citekey order="9">huffman</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.14)  17 OCT 2020 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.12)  18 OCT 2020 15:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/main.tex
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/main.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-06-03>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -501,15 +501,23 @@ File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count401
 \l__pdf_internal_box=\box51
 )
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/main.aux
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/general.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-1.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-2.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-3.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-4.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.aux))
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/main.aux
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/general.aux)
+
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-1.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-2.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-3.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-4.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.au
+x))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
@@ -525,8 +533,7 @@ LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 \AtBeginShipoutBox=\box52
-
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count402
 \scratchdimen=\dimen155
@@ -568,9 +575,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/main.bbl
-/home/michael/IdeaProjects/ElektronikProtokoll/src/main.bbl:131: Illegal parame
-ter number in definition of \NewValue.
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/main.bbl
+/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/main.bbl:131: Illeg
+al parameter number in definition of \NewValue.
 <to be read again> 
                    E
 l.131 ...i/Leuchtdiode#Elektrische_Eigenschaften}}
@@ -579,8 +586,8 @@ You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-/home/michael/IdeaProjects/ElektronikProtokoll/src/main.bbl:133: Illegal parame
-ter number in definition of \abx@field@howpublished.
+/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/main.bbl:133: Illeg
+al parameter number in definition of \abx@field@howpublished.
 <to be read again> 
                    E
 l.133     \endentry
@@ -625,8 +632,8 @@ Package pdftex.def Info: deckblatt.pdf , page1 used on input line 52.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
  [1
 
- </home/michael/IdeaProjects/ElektronikProtokoll/src/deckblatt.pdf>]
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/main.toc
+ </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/deckblatt.pdf>] (
+/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -639,9 +646,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [3] [4])
 \tf@toc=\write4
  [5]
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/general.tex
-/home/michael/IdeaProjects/ElektronikProtokoll/src/files/general.tex:25: Illega
-l parameter number in definition of \abx@field@howpublished.
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/general.tex
+/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/general.tex:2
+5: Illegal parameter number in definition of \abx@field@howpublished.
 <to be read again> 
                    E
 l.25 ...trom \cite{led-elektrische-eigenschaften}}
@@ -657,21 +664,21 @@ Overfull \hbox (48.36679pt too wide) in paragraph at lines 57--73
 [][] 
  []
 
-[7]) [8] [9]
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-1.tex
-[10
+[7] [8] [9]) [10]
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-1.te
+x [11
 
 
 ]
-<pictures/A1.png, id=138, 275.0275pt x 347.2975pt>
+<pictures/A1.png, id=141, 275.0275pt x 347.2975pt>
 File: pictures/A1.png Graphic file (type png)
 <use pictures/A1.png>
 Package pdftex.def Info: pictures/A1.png  used on input line 59.
 (pdftex.def)             Requested size: 171.49728pt x 216.55678pt.
 
 
-/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-1.tex:78: Pack
-age amsmath Error: Erroneous nesting of equation structures;
+/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-1.tex
+:78: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
@@ -683,8 +690,9 @@ l.78     \end{align}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[11 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/A1.png>]
-<pictures/a1-praktik.png, id=144, 926.46124pt x 656.4525pt>
+[12 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/A1.pn
+g>]
+<pictures/a1-praktik.png, id=147, 926.46124pt x 656.4525pt>
 File: pictures/a1-praktik.png Graphic file (type png)
 <use pictures/a1-praktik.png>
 Package pdftex.def Info: pictures/a1-praktik.png  used on input line 102.
@@ -698,119 +706,120 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) [12] [13 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a1-prak
-tik.png>] [14] [15])
-[16] (/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-2.tex
-[17
+) [13] [14 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/picture
+s/a1-praktik.png>]
+[15] [16]) [17]
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-2.te
+x [18
 
 
 ]
-<pictures/a2-praktik.png, id=168, 1211.52625pt x 660.4675pt>
+<pictures/a2-praktik.png, id=172, 1211.52625pt x 660.4675pt>
 File: pictures/a2-praktik.png Graphic file (type png)
 <use pictures/a2-praktik.png>
 Package pdftex.def Info: pictures/a2-praktik.png  used on input line 72.
 (pdftex.def)             Requested size: 360.0pt x 196.2572pt.
- [18]
-<pictures/a2-taster.png, id=174, 563.10374pt x 413.545pt>
+ [19]
+<pictures/a2-taster.png, id=178, 563.10374pt x 413.545pt>
 File: pictures/a2-taster.png Graphic file (type png)
 <use pictures/a2-taster.png>
 Package pdftex.def Info: pictures/a2-taster.png  used on input line 92.
 (pdftex.def)             Requested size: 208.80066pt x 153.34369pt.
- [19 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a2-praktik.pn
-g> </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a2-taster.png>]
-
+ [20 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/a2-p
+raktik.png> </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictur
+es/a2-taster.png>]
 Overfull \hbox (33.6765pt too wide) in paragraph at lines 116--121
 []\OT1/cmr/m/n/10.95 Um in C die L[]ange ei-nes Ar-rays zu be-stim-men, m[]usst
 e zu-erst mit-tels $\OML/cmm/m/it/10.95 sizeof\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
 /10.95 PINS\OT1/cmr/m/n/10.95 )$
  []
 
-[20]
-<pictures/a2-game-state.png, id=184, 763.85374pt x 416.55624pt>
+[21]
+<pictures/a2-game-state.png, id=187, 763.85374pt x 416.55624pt>
 File: pictures/a2-game-state.png Graphic file (type png)
 <use pictures/a2-game-state.png>
 Package pdftex.def Info: pictures/a2-game-state.png  used on input line 161.
 (pdftex.def)             Requested size: 360.0pt x 196.32173pt.
- [21] [22 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a2-game-
-state.png>]
+ [22] [23 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures
+/a2-game-state.png>]
 Overfull \hbox (14.53741pt too wide) in paragraph at lines 233--236
 []\OT1/cmr/m/n/10.95 In der $\OML/cmm/m/it/10.95 init[]game\OT1/cmr/m/n/10.95 (
 )$-Methode wird des Zu-stand mit-tels $\OML/cmm/m/it/10.95 game[]over$ \OT1/cmr
 /m/n/10.95 zur[]uckgesetzt.
  []
 
-[23] [24]
+[24] [25]
 Overfull \hbox (1.70676pt too wide) in paragraph at lines 306--312
 []\OT1/cmr/m/n/10.95 In Li-sting 15[] wer-den die ver-wen-de-ten Hilfs-me-tho-d
 en ge-zeigt. F[]ur $\OML/cmm/m/it/10.95 write[]to[]all$
  []
 
-[25] [26] [27] [28]) [29]
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-3.tex
-[30
+[26] [27] [28] [29]) [30]
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-3.te
+x [31
 
 
 ]
-<pictures/a3-praktik.png, id=217, 1435.3625pt x 726.715pt>
+<pictures/a3-praktik.png, id=221, 1435.3625pt x 726.715pt>
 File: pictures/a3-praktik.png Graphic file (type png)
 <use pictures/a3-praktik.png>
 Package pdftex.def Info: pictures/a3-praktik.png  used on input line 122.
 (pdftex.def)             Requested size: 360.0pt x 182.266pt.
- [31 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a3-praktik.pn
-g>] [32] [33] [34] [35] [36]) [37]
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-4.tex
-[38
+ [32 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/a3-p
+raktik.png>] [33] [34] [35] [36] [37]) [38]
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-4.te
+x [39
 
 
 ]
-<pictures/a4-1.png, id=245, 390.45876pt x 128.48pt>
+<pictures/a4-1.png, id=248, 390.45876pt x 128.48pt>
 File: pictures/a4-1.png Graphic file (type png)
 <use pictures/a4-1.png>
 Package pdftex.def Info: pictures/a4-1.png  used on input line 71.
 (pdftex.def)             Requested size: 360.0pt x 118.46179pt.
- [39 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a4-1.png>] [4
-0] [41] [42] [43]
-<pictures/a4-1-praktik.png, id=266, 1348.03625pt x 842.14626pt>
+ [40 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/a4-1
+.png>] [41] [42] [43] [44]
+<pictures/a4-1-praktik.png, id=269, 1348.03625pt x 842.14626pt>
 File: pictures/a4-1-praktik.png Graphic file (type png)
 <use pictures/a4-1-praktik.png>
 Package pdftex.def Info: pictures/a4-1-praktik.png  used on input line 219.
 (pdftex.def)             Requested size: 360.0pt x 224.8896pt.
- [44] [45 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a4-1-pra
-ktik.png>]
-<pictures/a4-2-pratik.png, id=274, 1178.4025pt x 766.865pt>
+ [45] [46 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures
+/a4-1-praktik.png>]
+<pictures/a4-2-pratik.png, id=277, 1178.4025pt x 766.865pt>
 File: pictures/a4-2-pratik.png Graphic file (type png)
 <use pictures/a4-2-pratik.png>
 Package pdftex.def Info: pictures/a4-2-pratik.png  used on input line 306.
 (pdftex.def)             Requested size: 360.0pt x 234.27379pt.
- [46]
+ [47]
 Overfull \hbox (10.38542pt too wide) in paragraph at lines 319--323
 \OT1/cmr/m/n/10.95 C-Bibliothek hin-zu, die ver-schie-de-ne ma-the-ma-ti-sche F
 unk-tio-nen zur Verf[]ugung
  []
 
-[47 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a4-2-pratik.pn
-g>] [48]
-<pictures/Kondensator-Ladekurve.png, id=286, 482.80376pt x 276.03125pt>
+[48 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/a4-2-
+pratik.png>] [49]
+<pictures/Kondensator-Ladekurve.png, id=290, 482.80376pt x 276.03125pt>
 File: pictures/Kondensator-Ladekurve.png Graphic file (type png)
 <use pictures/Kondensator-Ladekurve.png>
 Package pdftex.def Info: pictures/Kondensator-Ladekurve.png  used on input line
  412.
 (pdftex.def)             Requested size: 360.0pt x 205.82674pt.
- [49]) [50 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/Kondens
-ator-Ladekurve.png>]
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.tex
-<pictures/a5-1-vorbereitung.png, id=295, 500.87125pt x 251.94125pt>
+ [50]) [51 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/picture
+s/Kondensator-Ladekurve.png>]
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.te
+x
+<pictures/a5-1-vorbereitung.png, id=298, 500.87125pt x 251.94125pt>
 File: pictures/a5-1-vorbereitung.png Graphic file (type png)
 <use pictures/a5-1-vorbereitung.png>
 Package pdftex.def Info: pictures/a5-1-vorbereitung.png  used on input line 47.
 
 (pdftex.def)             Requested size: 360.0pt x 181.09001pt.
-
-[51
+ [52
 
 
 ]
-<pictures/a5-1-fall-1.png, id=299, 497.86pt x 256.96pt>
+<pictures/a5-1-fall-1.png, id=302, 497.86pt x 256.96pt>
 File: pictures/a5-1-fall-1.png Graphic file (type png)
 <use pictures/a5-1-fall-1.png>
 Package pdftex.def Info: pictures/a5-1-fall-1.png  used on input line 73.
@@ -819,17 +828,17 @@ Package pdftex.def Info: pictures/a5-1-fall-1.png  used on input line 73.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[52 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a5-1-vorbereit
-ung.png>] [53 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a5-1
--fall-1.png>]
-<pictures/a5-1-fall-2.png, id=308, 461.725pt x 256.96pt>
+[53 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/a5-1-
+vorbereitung.png>] [54 </home/michael-personal/IdeaProjects/ElektronikProtokoll
+/src/pictures/a5-1-fall-1.png>]
+<pictures/a5-1-fall-2.png, id=311, 461.725pt x 256.96pt>
 File: pictures/a5-1-fall-2.png Graphic file (type png)
 <use pictures/a5-1-fall-2.png>
 Package pdftex.def Info: pictures/a5-1-fall-2.png  used on input line 112.
 (pdftex.def)             Requested size: 360.0pt x 200.34956pt.
- [54 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a5-1-fall-2.p
-ng>] [55] [56]
-<pictures/a5-praktik.png, id=321, 810.77907pt x 575.14874pt>
+ [55 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/a5-1
+-fall-2.png>] [56] [57]
+<pictures/a5-praktik.png, id=324, 810.77907pt x 575.14874pt>
 File: pictures/a5-praktik.png Graphic file (type png)
 <use pictures/a5-praktik.png>
 Package pdftex.def Info: pictures/a5-praktik.png  used on input line 254.
@@ -838,43 +847,44 @@ Package pdftex.def Info: pictures/a5-praktik.png  used on input line 254.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[57] [58 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a5-prakti
-k.png (PNG copy)>] [59] [60] [61]) [62]
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.tex
+[58] [59 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/
+a5-praktik.png (PNG copy)>] [60] [61] [62]) [63]
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.te
+x
 Overfull \hbox (12.70142pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/14.4 Aufgabe 6 - Mo-tor-steue-rung mit N[]ahreungssensor 
  []
 
-[63
+[64
 
 
-] [64]
+] [65]
 Overfull \hbox (5.45786pt too wide) in paragraph at lines 89--90
 \OT1/cmr/m/n/10.95 Es sol-len die By-tes ge-fun-den wer-den, wel-che an das Sch
 ie-be-re-gi-ster []ubertragen
  []
 
-[65]
-<pictures/a6-praktikum.png, id=350, 876.27374pt x 626.34pt>
+[66]
+<pictures/a6-praktikum.png, id=353, 876.27374pt x 626.34pt>
 File: pictures/a6-praktikum.png Graphic file (type png)
 <use pictures/a6-praktikum.png>
 Package pdftex.def Info: pictures/a6-praktikum.png  used on input line 128.
 (pdftex.def)             Requested size: 360.0pt x 257.31714pt.
- [66 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a6-praktikum.
-png (PNG copy)>] [67]
+ [67 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/a6-p
+raktikum.png (PNG copy)>] [68]
 Overfull \hbox (33.2974pt too wide) in paragraph at lines 205--209
 []\OT1/cmr/m/n/10.95 Die in Li-sting 36[] ge-zeig-ten Va-ria-blen $\OML/cmm/m/i
 t/10.95 segment[]index[]left$ \OT1/cmr/m/n/10.95 und $\OML/cmm/m/it/10.95 segme
 nt[]index[]right$
  []
 
-[68] [69]
+[69] [70]
 Overfull \hbox (9.29669pt too wide) in paragraph at lines 303--304
 []\OT1/cmr/m/n/10.95 Da der Si-cher-heits-ab-stand 30cm be-tr[]agt, wird wahr, 
 bzw. $\OML/cmm/m/it/10.95 true$\OT1/cmr/m/n/10.95 , zur[]uckgegeben,
  []
 
-[70]
+[71]
 Overfull \hbox (32.13pt too wide) in paragraph at lines 321--324
 []\OT1/cmr/m/n/10.95 Zuerst wird in Li-sting 41[], je nach Dreh-rich-tung, die 
 enst-pre-chen-de $\OML/cmm/m/it/10.95 segment[]index[]\OMS/cmsy/m/n/10.95 ^^C$
@@ -887,9 +897,10 @@ m/n/10.95 ge-spei-chert. Der zu-geh[]orige Wert des $\OML/cmm/m/it/10.95 SEGMEN
 T[]DISPLAY$
  []
 
-[71] [72] [73] [74]) [75]
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.tex
-<pictures/a7-addon.png, id=385, 361.35pt x 158.09062pt>
+[72] [73] [74] [75]) [76]
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.te
+x
+<pictures/a7-addon.png, id=388, 361.35pt x 158.09062pt>
 File: pictures/a7-addon.png Graphic file (type png)
 <use pictures/a7-addon.png>
 Package pdftex.def Info: pictures/a7-addon.png  used on input line 9.
@@ -899,12 +910,12 @@ Overfull \hbox (1.34912pt too wide) in paragraph at lines 9--10
  [][] 
  []
 
-[76
+[77
 
 
- </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a7-addon.png (PNG
- copy)>] [77]
-<pictures/a7-rechnung-vorwiderstand.png, id=392, 816.04875pt x 334.24875pt>
+ </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/a7-addon
+.png (PNG copy)>] [78]
+<pictures/a7-rechnung-vorwiderstand.png, id=395, 816.04875pt x 334.24875pt>
 File: pictures/a7-rechnung-vorwiderstand.png Graphic file (type png)
 <use pictures/a7-rechnung-vorwiderstand.png>
 Package pdftex.def Info: pictures/a7-rechnung-vorwiderstand.png  used on input 
@@ -915,14 +926,14 @@ Overfull \hbox (36.55519pt too wide) in paragraph at lines 101--102
  [][] 
  []
 
-[78 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a7-rechnung-vo
-rwiderstand.png>]
+[79 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/a7-re
+chnung-vorwiderstand.png>]
 Overfull \hbox (16.52957pt too wide) in paragraph at lines 132--136
 \OT1/cmr/m/n/10.95 wur-de bei bei-dem als Aus- bzw. Ein-gang ver-wen-det, da di
 e-ser PWM-Modulation
  []
 
-<pictures/a7-praktik.png, id=397, 955.31906pt x 548.80031pt>
+<pictures/a7-praktik.png, id=401, 955.31906pt x 548.80031pt>
 File: pictures/a7-praktik.png Graphic file (type png)
 <use pictures/a7-praktik.png>
 Package pdftex.def Info: pictures/a7-praktik.png  used on input line 139.
@@ -930,14 +941,14 @@ Package pdftex.def Info: pictures/a7-praktik.png  used on input line 139.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[79] [80 </home/michael/IdeaProjects/ElektronikProtokoll/src/pictures/a7-prakti
-k.png (PNG copy)>] [81]
+[80] [81 </home/michael-personal/IdeaProjects/ElektronikProtokoll/src/pictures/
+a7-praktik.png (PNG copy)>] [82]
 Overfull \hbox (2.53665pt too wide) in paragraph at lines 245--247
 \OT1/cmr/m/n/10.95 Schlei-fe selbst liest nur einen Buch-sta-ben vom se-ri-el-l
 en In-ter-face und []ubergibt
  []
 
-[82] [83] [84] [85] [86] [87] [88]) [89]
+[83] [84] [85] [86] [87] [88] [89]) [90]
 Overfull \hbox (57.65706pt too wide) in paragraph at lines 75--75
 []\OT1/cmr/m/n/10.95 KT-Elektronic. \OT1/cmr/m/it/10.95 Ul-tra-schall Messmo-du
 l HC-SR04\OT1/cmr/m/n/10.95 . $\OT1/cmtt/m/n/10.95 https : / / www . mikrocontr
@@ -950,8 +961,8 @@ Overfull \hbox (7.92963pt too wide) in paragraph at lines 75--75
 _ beschreibung _
  []
 
-/home/michael/IdeaProjects/ElektronikProtokoll/src/main.tex:75: Illegal paramet
-er number in definition of \abx@field@howpublished.
+/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/main.tex:75: Illega
+l parameter number in definition of \abx@field@howpublished.
 <to be read again> 
                    E
 l.75 \end
@@ -960,24 +971,35 @@ You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-[90
+[91
 
-] (/home/michael/IdeaProjects/ElektronikProtokoll/src/main.aux
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/general.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-1.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-2.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-3.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-4.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.aux)
-(/home/michael/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.aux))
+] (/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/main.aux
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/general.aux)
+
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-1.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-2.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-3.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-4.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-5.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-6.au
+x)
+(/home/michael-personal/IdeaProjects/ElektronikProtokoll/src/files/aufgabe-7.au
+x))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 14373 strings out of 480478
- 243944 string characters out of 5905958
- 1050941 words of memory out of 5000000
- 30150 multiletter control sequences out of 15000+600000
+ 14372 strings out of 480478
+ 244487 string characters out of 5905958
+ 1050947 words of memory out of 5000000
+ 30149 multiletter control sequences out of 15000+600000
  540446 words of font info for 54 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  40i,20n,57p,814b,2913s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -997,11 +1019,11 @@ onts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10
 .pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/shar
 e/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texmf-
 dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on /home/michael/IdeaProjects/ElektronikProtokoll/src/main.pdf (
-90 pages, 1999279 bytes).
+Output written on /home/michael-personal/IdeaProjects/ElektronikProtokoll/src/m
+ain.pdf (91 pages, 2001384 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
+ 503 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

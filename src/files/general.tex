@@ -73,9 +73,6 @@ Die Bedeutung der Codierung der verwendeten Widerstände kann in Tab. \ref{tab:f
     \end{adjustwidth}
 \end{table}
 
-\subsection{Taster}
-\label{subsec:taster}
-
 \subsection{Mikrocontroller \cite{arduino-r3}}
 \label{subsec:mikrocontroller}
 
@@ -112,32 +109,62 @@ In Tabelle \ref{tab:bausteine-und-deren-logische-funktionen} sind die verwendete
     \end{tabular}
 \end{table}
 
-\subsection{Kondensatoren}
+\subsection{Kondensatoren \cite{kondesator}}
 \label{subsec:kondensatoren}
 
-\subsection{Operationsverstärker}
-\label{subsec:operationsverstaerker}
+Kondensatoren nehmen elektrische Ladungen auf und können sie zu einem späteren Zeitpunkt wieder abgeben.
+Die Kapazität wird mit der Einheit Farad angegeben.
+Die verwendeten Kondensatoren sind gepolte Elektrolytkondensatoren.
+Durch die Polung können die Kondensatoren beschädigt werden, sollten sie falsch verbaut werden.
 
 \subsection{Motortreiber}
 \label{subsec:motortreiber}
 
+Motortreiber werden verwendet, um Gleichstrommotoren zu betreiben.
+Der Treiber legt eine Versorgungsspannung an den Motor an, wenn ein Signal an einem seiner Eingangspins anliegt.
+Der hier verwendete Treiber besitzt zwei Eingänge pro Motor und kann zwei Motoren betreiben.
+Je nach verwendeten Eingang wird der Motor entweder in oder gegen den Uhrzeigersinn betrieben.
+
 \subsection{Ultraschallsensor}
 \label{subsec:ultraschallsensor}
+
+Ultraschallsensoren verwenden Ultraschall um die Entfernung zu Objekten zu messen.
+Es wird zuerst ein Ultraschallsignal ausgesendet und die Zeit gemessen, wie lange es dauert, bis ein Echo empfangen wird.
+Durch die bekannte Geschwindigkeit von Schall in Luft kann dann die Entfernung gemessen werden.
 
 \subsection{7-Segment Anzeige}
 \label{subsec:7-segment-anzeige}
 
+Eine 7-Segment Anzeige verwendet sieben Segmente, mit LEDs, um Zahlen anzuzeigen.
+Die einzelnen Segmente können über Eingangspins angesprochen werden.
+Des Weiteren enthält die verwendete Anzeige einen Dezimalpunkt, um Nachkommastellen anzeigen zu können, sollten mehrere Anzeigen verwendet werden.
+
 \section{Begriffe}
 \label{sec:begriffe}
 
-\subsection{Pulsewellenmodulation (PWM)}
-\label{subsec:pulsewellenmodulation-(pwm)}
+\subsection{Pulswellenmodulation (PWM)}
+\label{subsec:pulsewellenmodulation}
+
+Bei der Pulswellenmodulation wird ein Signal mit hoher Frequenz ein- und ausgeschaltet.
+Dadurch kann die durchschnittliche Leistung reguliert werden.
+Dies ermöglicht z.B.\ das Dimmen einer LED oder das Steuern der Geschwindigkeit eines Motors.
 
 \subsection{PullUp}
 \label{subsec:pullup}
 
+Ein PullUp-Input ist eine Schaltungstechnik, mit der ein Taster an einen Pin eines Mikrocontroller geschaltet werden kann.
+Durch das Verwenden eines Widerstands zwischen Taster und Versorgungsspannung, um den Mikrocontroller vor hohen Spannungen zu schützen.
+
 \subsection{Baudrate}
 \label{subsec:baudrate}
 
+Die Baudrate gibt an, wie viele Symbole pro Sekunde über eine Schnittstelle übertragen werden können.
+Im Fall des verwendeten Mikrocontrollers ist ein Symbol ein Bit.
+Die Baudrate ist hier also gleichzusetzen mit der Bitübertragungsrate.
+
 \subsection{Wahrheitstabelle}
 \label{subsec:wahrheitstabelle}
+
+Eine Wahrheitstabelle wird verwendet, um logische Ausdrücke auszuwerten.
+Einige logische Operationen wie AND oder OR sind vordefiniert.
+Mittels Wahrheitstabellen können komplexere Verknüpfungen aufgelöst und ausgewertet werden.
