@@ -80,6 +80,8 @@ Die Pins zur Ansteuerung der LEDs wurde willkürlich getroffen.
 Es handelt sich nur von oben nach unten um die ersten, zur Verfügung stehenden Pins.
 Pin 2 wurde gewählt, da nur Pin 2 und 3 in der Lage sind, an einen Interrupt gekoppelt zu werden.
 
+\newpage
+
 Im Schaltkreis ist weiters der Taster zu sehen, der mit einem Pull-Up-Widerstand, wie in Sektion \ref{subsec:pullup} zu sehen, versehen ist.
 Die Terminals an der Spalte 15 auf beiden Seiten sind verbunden, die Terminal an den Spalten 15 und 13 werden bei einem Tastendruck verbunden.
 Damit ergibt sich das Teilschaltbild des Tasters, dass in Abbildung \ref{fig:schaltung-taster-pull-up} zu sehen ist.
@@ -126,6 +128,8 @@ D.h., die der Taster gedrückt, wenn der Pin von $PINS[WINNING\_PIN\_INDEX]$ ein
 const unsigned long INTERVAL_DEFAULT = 5000;
 \end{lstlisting}
 
+\newpage
+
 Mit der Konstanten die in Listing \ref{lst:a2-const-pin} angegeben ist, wird das Standardinterval angegeben, mit dem bei den LEDs weitergesprungen wird.
 D.h., nach Ablauf der Zeit von $INTERVAL\_DEFAULT$, in Millisekunden, wird zur nächsten LED gesprungen, wenn das Spiel neu gestartet wurde.
 
@@ -170,6 +174,8 @@ Würde sie den Wert $NUM\_PINS$ annehmen, wird sie wieder auf 0 zurückgesetzt.
 Diese Variable gibt an, welcher Index, von 0 beginnend, aus $PINS$ verwendet wird, um eine LED anzusteuern.
 D.h., $pin\_index = 0 \Rightarrow Pin13 = HIGH$, $pin\_index = 1 \Rightarrow Pin12 = HIGH$, u.s.w..
 
+\newpage
+
 \begin{lstlisting}[language=C,label={lst:a2-serial-begin}, caption={Einstellen der seriellen Schnittstelle}]
 void setup() {
   Serial.begin(9600);
@@ -190,6 +196,8 @@ In Listing \ref{lst:a2-pin-setup} werden die Pins durchgegangen.
 Hier wird das in Listing \ref{lst:a2-const-pin} angelegte Array zum ersten Mal verwendet.
 Es werden hier alle Pinnummern in dem Arrays durchgelaufen und als Output eingestellt.
 Dadurch muss nicht jede Pinnummer einzeln eingerichtet werden.
+
+\newpage
 
 \begin{lstlisting}[language=C,label={lst:a2-button setup}, caption={Einstellen des Buttons}]
 pinMode(PIN_BUTTON, INPUT_PULLUP);
@@ -263,6 +271,8 @@ void on_button_falling() {
 Obwohl die Methoden, welche die Logik des Interrupts darstellen, am Ende des Codes liegen, werden sie hier besprochen.
 Damit kann ein Kontext für andere Codeteile erzeugt werden.
 
+\newpage
+
 In Listing \ref{lst:a2-button-interrupt} wird die in Listing \ref{lst:a2-button setup} verwendete Methode gezeigt.
 Zu Beginn von $on\_button\_change()$ wird der Zustand des Tasters ausgelesen.
 Liegen zum Zeitpunkt des Aufrufs $5V$ am Pin an, so wird $on\_button\_rising()$ aufgerufen, ansonsten wird $on\_button\_falling()$ verwendetet.
@@ -302,6 +312,8 @@ void increase_pin_index() {
     }
 }
 \end{lstlisting}
+
+\newpage
 
 In Listing \ref{lst:a2-hilfsmethoden} werden die verwendeten Hilfsmethoden gezeigt.
 Für $write\_to\_all$ kann der gewünschte Zustand übergeben werden, $HIGH$ oder $LOW$, und dieser wird, ähnlich wie in $setup()$, mittels einer Schleife an alle Pins im $PINS$-Array übernommen.
@@ -470,6 +482,3 @@ Es wurde nämlich die Funktionsweise des Tasters falsch verstanden.
 Die Annahme war nicht, dass wie in Abbildung \ref{fig:schaltung-taster-pull-up} dargestellt, die Spalte 15, bzw.\ die Spalte 13,  verbunden ist, sondern dass Spalte 15 mit Spalte 13 verbunden ist.
 Würde dies zutreffen, so würde die Schaltung nicht funktionieren.
 Nachdem jedoch auch die gegebene Schaltung eines Pull-Down Widerstands falsch gelesen wurde, wurde sie unbeabsichtigt richtig implementiert.
-
-\subsection{Zusammenfassung}
-\label{subsec:a2-zusammenfassung}

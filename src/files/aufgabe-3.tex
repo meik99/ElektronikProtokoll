@@ -108,6 +108,8 @@ Die Tabellen können in den Tabellen \ref{tab:wahrheitstabellen-verwendeter-logi
     \end{tabular}
 \end{table}
 
+\newpage
+
 \subsection{Praktikumsaufgabe}
 \label{subsec:a3-praktikumsaufgabe2}
 
@@ -119,7 +121,7 @@ Mittels des angeschlossenen Multimeters kann der Ausgang manuell ausgelesen werd
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{pictures/a3-praktik.png}
+    \includegraphics[width=0.9\textwidth]{pictures/a3-praktik.png}
     \caption{Implementierter Stromkreis von Aufgabe 3}
     \label{fig:a3-implementiert}
 \end{figure}
@@ -169,6 +171,8 @@ delay(2000);
 TRUTH_TABLE[3] = digitalRead(PIN_INPUT) == HIGH;
 \end{lstlisting}
 
+\newpage
+
 Der Code in Listing \ref{lst:a3-ausführen-des-gatters} setzt nacheinander die Eingänge des Gatters auf die Werte der Wahrheitstabellen.
 D.h., es werden beide Eingänge auf 0 gesetzt und das Ergebnis im Array gespeichert.
 Danach wird ein Eingang auf 1 und der andere auf 0 gesetzt und das Ergebnis wieder im Array gespeichert, u.s.w..
@@ -205,6 +209,8 @@ Die Ergebnisse die in der Variable aus Listing \ref{lst:a3-truthtable} gespeiche
 Diese Ausgabe wird gemacht, um eine manuelle Überprüfung des Ergebnisses machen zu können.
 D.h., sie wird gemacht um ein Debuggen des Codes zu ermöglichen, ist aber für eine korrekte Ausführung des Programms nicht notwendig.
 Das Programm gibt hier die resultierende Wahrheitstabelle, in der Form einer Tabelle wie in Tabellen \ref{tab:wahrheitstabellen-verwendeter-logikfunktionen} dargestellt, aus.
+
+\newpage
 
 \begin{lstlisting}[language=C,label={lst:a3-evaluierung-der-ergebnisse}, caption={Evaluierung der Ergebnisse}]
 if (!TRUTH_TABLE[0]
@@ -248,6 +254,8 @@ void loop()
 {
 }
 \end{lstlisting}
+
+\newpage
 
 Die Programmschleife in Listing \ref{lst:a3-loop} ist leer, da der Code für jedes Logikgatter nur einmal ausgeführt werden muss.
 Da für jedes Logikgatter die Schaltung umgebaut werden muss, sprich, es muss das Gatter ausgetauscht werden, ist das Ausführen  des Codes in einer Schleife nicht zielführend.
@@ -368,7 +376,3 @@ Hier ist die Reihenfolge "Ausgang - Eingang 1 - Eingang - 2".
 Um das NOR-Gatter richtig zu erkennen, muss daher die Schaltung entsprechend angepasst werden.
 Da die Schaltung theoretisch ein unbekanntes Gatter erkennen soll, müsste daher die Schaltung geändert werden, wenn das Gatter nicht erkannt wurde.
 Wird das Gatter danach immer noch nicht erkannt, handelt es sich tatsächlich um ein unbekanntes Gatter, ansonsten um ein NOR-Gatter.
-
-\subsection{Zusammenfassung}
-\label{subsec:a3-zusammenfassung2}
-

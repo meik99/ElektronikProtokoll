@@ -136,6 +136,8 @@ Ein $LOW$ Signal an diesem Pin führt dazu, dass Daten in das Schieberegister ge
 Pin 4 legt das Datensignal an und Pin 6 dient zum synchronisieren des Datensignals mit den weiterschieben im Register.
 D.h., an Pin 6 liegt das Clock-Signal an.
 
+\newpage
+
 Die Ausgänge 1 bis 7 des Schieberegisters sind an den Eingängen A bis G der 7-Segment Anzeige angeschlossen.
 Der Ausgang 8 sow der eingang $DP$ der 7-Segment Anzeige werden nicht benötigt und werden folglich an Masse angeschlossen.
 Da die Anzeige aus LEDs besteht wird vor jedem Eingang ein Vorwiderstand von $150\Omega$ angeschlossen.
@@ -161,6 +163,8 @@ Die rote LED wird mittel Pin 8 gesteuert.
 Im nachfolgenden Text wird der Programmcode der Aufgabe erläutert.
 Einzelne Teile des Codes werden ausgewählt und beschrieben.
 Am Ende dieser Sektion befindet sich der vollständige Programmcode.
+
+\newpage
 
 \begin{lstlisting}[language=C,label={lst:a6-segment-konstanten}, caption={Wichtige Konstanten}]
 const int SEGMENT_COUNT = 10;
@@ -202,6 +206,8 @@ false => motor turns left
 volatile bool turn_direction = true;
 \end{lstlisting}
 
+\newpage
+
 Die in Listing \ref{lst:a6-variablen} gezeigten Variablen $segment\_index\_left$ und $segment\_index\_right$ werden verwendet, um die Geschwindigkeit nach Links, bzw.\ nach Rechts, des Motors zu speichern.
 $turn\_direction$ gibt an, ob sich der Motor nach Rechts oder nach Links derehen soll.
 Ist die Variable auf $true$ gesetzt, soll sich der Motor nach Rechts drehen, ansonsten nach Links.
@@ -228,6 +234,8 @@ setup() {
 In Listing \ref{lst:a6-setup-taster} werden die Taster mit Interrupts verknüpft.
 Anders als in Abschnitt \ref{sec:aufgabe-2---reaktionsspiel}, wird nur ein Interrupt beim Drücken des Tasters benötigt, nicht jedoch beim los lassen.
 Daher wird der $attachInterrupt(\dots)$ Methode lediglich $RISING$ anstatt $CHANGE$ mitgegeben.
+
+\newpage
 
 \begin{lstlisting}[language=C,label={lst:a6-interrupts}, caption={Interrupts der Taster}]
 void on_button_left_rising() {
@@ -270,6 +278,8 @@ Damit ist das Schieberegister bereit zum beschrieben werden.
 Die Methode $shiftOut(\dots)$ schreibt dann, unter verwendung des Daten- und Clockpins, den Wert in das Register.
 Anschließend wird mit dem Setzen auf $HIGH$ des Pin 5 das Schreiben beendet.
 
+\newpage
+
 \begin{lstlisting}[language=C,label={lst:a6-distanz-messung}, caption={Distanz Messung}]
 bool is_distance_safe() {
     // Clear trigger
@@ -301,6 +311,8 @@ Die Distanz beträgt dann:
 \end{align}
 
 Da der Sicherheitsabstand 30cm beträgt, wird wahr, bzw.\ $true$, zurückgegeben, wenn der Abstand $> 30cm$ ist, ansonsten falsch, bzw.\ $false$.
+
+\newpage
 
 \begin{lstlisting}[language=C,label={lst:a6-aktualisieren-7-segment-anzeige}, caption={Einstellen der 7-Segment Anzeige}]
 void loop()
@@ -340,6 +352,8 @@ Die ''Stärke'' des PWM-Signals wird nun in Listing \ref{lst:a6-moto-geschwindig
 Eine Division der $MAX\_MOTOR\_SPEED$ Konstanten durch die Anzahl an Geschwindigkeitsstufen wird durchgeführt und dann mit der aktuellen Geschwindigkeit multipliziert.
 Dadurch ergibt sich der Wert, auf den das PWM-Signal eingestellt werden muss.
 Sollte es sich herausstellen, dass der Sicherheitsabstand unterschritten wird, wird der Wert auf 0 gesetzt.
+
+\newpage
 
 \begin{lstlisting}[language=C,label={lst:a6-motor-steuerung}, caption={Ansteuerung des Motors}]
     ...
@@ -522,6 +536,8 @@ void on_button_right_rising() {
 }
 \end{lstlisting}
 
+\newpage
+
 \subsection{Fehlerdiskussion}
 \label{subsec:a6-fehlerdiskussion}
 
@@ -531,6 +547,3 @@ Sie kann ohne Konsequenzen gelöscht werden.
 Der Strom durch das Schieberegister bei eingeschalteter Anzeige ist zu hoch.
 Eine andere Wahl der Widerstände würde dies verhinder.
 Nach Experimentieren an der Schaltung stellt sich heraus, dass ein Widerstand von $500\Omega$ zu akzeptablen Resultaten führt.
-
-\subsection{Zusammenfassung}
-\label{subsec:a6-zusammenfassung}

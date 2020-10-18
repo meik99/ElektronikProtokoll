@@ -36,6 +36,8 @@ Ein Beispiel dieser Schaltung befindet sich im Abschnitt \ref{subsec:a5-vorberei
     \end{tabular}
 \end{table}
 
+\newpage
+
 \subsection{Vorbereitung}
 \label{subsec:a5-vorbereitung}
 
@@ -74,6 +76,8 @@ Es resultiert das Schaltbild von Abbildung \ref{fig:fall-1}.
     \caption{Fall 1}
     \label{fig:fall-1}
 \end{figure}
+
+\newpage
 
 Die mit Blau markierten Komponenten können  zu einer Schaltung mit einer Ersatzspannungsquelle mit Innenwiderstand zusammengefasst werden.
 Der Innenwiderstand beträgt demnach:
@@ -205,6 +209,8 @@ Da eine Ganzzahl benötigt wird werden die Ergebnisse gerundet.
     \end{tabular}
 \end{table}
 
+\newpage
+
 \subsubsection{Aufgabe 3}
 
 Es soll für bestimmte Frequenzen berechnet werden, wielange ein Bitmuster anliegen muss.
@@ -269,6 +275,8 @@ void setup()
 }
 \end{lstlisting}
 
+\newpage
+
 In Listing \ref{lst:a5-anlegen-der-pins} werden die benötigten Pins konfiguriert.
 Das Register ''DDRD'' verwaltet die Pins 0 bis 7.
 Durch das übergebene Bitmuster, werden die Pins 7 bis 2 als Ausgabepins konfiguriert.
@@ -286,6 +294,8 @@ void loop()
     ...
 }
 \end{lstlisting}
+
+\newpage
 
 Listing \ref{lst:a5-lesen-von-eingaben} zeigt, wie Eingaben des Benutzers eingelesen werden können.
 Durch das Aufrufen von $Serial.available()$ wird abgefragt, ob eine Eingabe getätigt wurde.
@@ -326,6 +336,8 @@ Die Konstanten die hier verwendet werden, sind den ASCII-Werten der jeweiligen B
 Dies hat zur Folge, dass nur Kleinbuchstaben als korrekte Eingaben erkannt werden.
 Wird eine Eingabe nicht erkannt, werden die Pins mittels dem Register $PORTD$ ausgeschaltet.
 $PORTD$ ist ein Register, ähnlich wie $DDRD$, welches die Ausgabe der Pins von 7 bis 0 steuert.
+
+\newpage
 
 \begin{lstlisting}[language=C,label={lst:a5-play-frequency}, caption={Abspielen von Frequenzen}]
 void play_frequency(int frequency, double time) {
@@ -433,6 +445,3 @@ Die Bits der $value$ Variable müssten um 4 Stellen verschoben werden anstelle v
 Die Werte von 0 bis 16 werden mittels 4 Bits abgebildet, während in dem Register 8 Bits vorhanden sind.
 In der derzeitigen Implementierung werden maximal die Pins 5 und 4 angesprochen, nicht jedoch 7 und 6.
 Mittels eines Shifts um 4 anstelle von 2 können alle benötigten Pins angesprochen werden.
-
-\subsection{Zusammenfassung}
-\label{subsec:a5-zusammenfassung}

@@ -4,7 +4,7 @@
 In dieser Aufgabe soll eine Datenübertragung mittels Infrarotsignal implementiert werden.
 Um ein solches Signal in der verwendeten Simulationssoftware zu simulieren, wurde die Schaltung aus Abbildung \ref{fig:a7-simulation-infrarot} verwendet.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics{pictures/a7-addon.png}
     \caption{Simulation eines Infrarotsignals}
@@ -15,6 +15,8 @@ Für diese Aufgabe, soll ein 38kHz Signal von einem Sender-Mikrocontroller and e
 Eine Übertragung von Text soll mithilfe des Sendens von Morsezeichen implementiert werden.
 Es soll dem Benutzer dann ermöglicht werden, über die serielle Schnittstelle Zeichen an den Sender zu übergeben.
 Dieser sendet die Zeichen dann an den Empfänger, welche sie wieder ausgibt.
+
+\newpage
 
 \subsection{Materialien}
 \label{subsec:a7-materialien}
@@ -74,6 +76,8 @@ In Tabelle \ref{tab:a7-morsecode} werden die Zuordnung zwischen Buchstaben und M
         \hline
     \end{tabular}
 \end{table}
+
+\newpage
 
 \subsubsection{Aufgabe 2}
 
@@ -145,6 +149,8 @@ Im nachfolgenden Text wird der Programmcode der Aufgabe erläutert.
 Einzelne Teile des Codes werden ausgewählt und beschrieben.
 Am Ende der jeweiligen Sektionen befinden sich die vollständigen Programmcodes des Senders und des Empfängers.
 
+\newpage
+
 \subsubsection{Sender}
 
 \begin{lstlisting}[language=C,label={lst:a7-sender-wichtige-konstanten}, caption={Wichtige Konstanten des Senders}]
@@ -191,6 +197,8 @@ const int CODE[26][4] = {
 const int OFFSET = 'A';
 \end{lstlisting}
 
+\newpage
+
 In Listing \ref{lst:a7-sender-wichtige-konstanten} werden die verwendeten Konstanten gezeigt.
 Die Konstante $DURATION$ wird verwendet, um die Zeit für dits und dahs zu berechnen.
 In der $CODE$ Matrix ist die Kodierung von Buchstaben zu Morsecode abgebildet.
@@ -200,9 +208,7 @@ Daher werden nicht verwendete Positionen mit -1 angegeben.
 Die Konstante $OFFSET$ speichert den ASCII-Wert des Buchstaben 'A'.
 
 \begin{lstlisting}[language=C,label={lst:a7-sender-schleife}, caption={Programmschleife des Senders}]
-
-void loop()
-{
+void loop() {
   if(Serial.available()) {
     send_letter(Serial.read());
   }
@@ -236,7 +242,6 @@ bool send_letter(char letter) {
       break;
     }
   }
-
   digitalWrite(PIN_SENDER, LOW);
   return true;
 }
@@ -373,6 +378,8 @@ Ist der Zustand $LOW$, wird ein Timer gestartet.
 Ändert sich der Zustand, wird die vergangene Zeit gemessen und dekodiert.
 Der Timer wird zurückgesetzt und, sollte das Dekodieren erfolgreich gewesen sein, wird der empfangenen Buchstabe auf der seriellen Schnittstelle ausgegeben.
 
+\newpage
+
 \begin{lstlisting}[language=C,label={lst:a7-receiver-decode}, caption={Dekodieren empfangenen Daten}]
 int decode(unsigned long duration) {
   int result = -1;
@@ -410,6 +417,8 @@ int decode(unsigned long duration) {
   return result;
 }
 \end{lstlisting}
+
+\newpage
 
 Das eigentliche Dekdoieren wird in Listing \ref{lst:a7-receiver-decode} vorgenommen.
 Ist die Zeit zwischen einen Zustandswechsel vier mal $DURATION$, d.h.\ 100ms, wird der Buchstabe als Empfangen angenommen.
@@ -539,6 +548,3 @@ Schlussendlich wäre eine interessante Erweiterung oder Alternative dieser Aufga
 Beim Morsecode wird ein Endzeichen benötigt, um Zeichen zu Unterscheiden.
 Bei der Huffman-Kodierung ist kein Codewort der Prefix eines anderen.
 Damit kann eine Dekodierung ohne Endwort durchgeführt werden, da es Eindeutig ist, wann ein Wort endet \cite{huffman}.
-
-\subsection{Zusammenfassung}
-\label{subsec:a7-zusammenfassung}

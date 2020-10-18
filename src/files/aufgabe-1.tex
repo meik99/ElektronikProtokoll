@@ -40,6 +40,8 @@ Nach Ablauf der vier Sekunden soll die grüne LED erlöschen und der Ablauf bei 
     \end{tabular}
 \end{table}
 
+\newpage
+
 \subsection{Vorbereitung}
 \label{subsec:A1-vorbereitung}
 
@@ -126,6 +128,8 @@ Durch das Anlegen von Konstanten für die Pins, kann der Code aussagekräftiger 
 Des weiteren entsteht dadurch die Möglichkeit, andere Pins zu verwenden, ohne den gesamtem Code durchgehen zu müssen.
 Es reicht die Nummer an einer Stelle zu ändern.
 
+\newpage
+
 \begin{lstlisting}[language=C,label={lst:a1-setup}, caption={Setup für Aufgabe 1}]
 void setup()
 {
@@ -172,6 +176,8 @@ void loop()
 }
 \end{lstlisting}
 
+\newpage
+
 In Listing \ref{lst:a1-loop} werden die einzelnen Phasen implementiert.
 Nach jeder Leerzeile, d.h., nach Zeile 6, 9, und 14 beginnt jeweils eine neue Phase.
 
@@ -194,7 +200,7 @@ Es wird die grüne LED wieder ausgeschaltet, während die Gelbe aktiv wird.
 Es folgt wieder eine Unterbrechung des Programms für eine Sekunde.
 Am Ende der $loop()$ Funktion wird sie wieder von Beginn an, d.h., von Phase 1 aus, ausgeführt.
 
-
+\newpage
 \begin{lstlisting}[language=C,label={lst:a1-programmcode}, caption={Vollständiger Programmcode für Aufgabe 1}]
 const int PIN_RED = 13;
 const int PIN_YELLOW = 12;
@@ -239,7 +245,3 @@ void on(int pin) {
 \label{subsec:a1-fehlerdiskussion}
 
 Es wurden während dieser Aufgabe keine Fehler gefunden.
-
-\subsection{Zusammenfassung}
-\label{subsec:zusammenfassung}
-

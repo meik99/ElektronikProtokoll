@@ -79,6 +79,8 @@ Für den ersten Teil sind folgende Werte gegeben.
     \item $U_a = 3V$
 \end{itemize}
 
+\newpage
+
 Nun soll ermittelt werden, welches Verhältnis zwischen den Widerständen $R_1$ und $R_2$ herrschen muss, damit der gegeben Zustand möglich ist.
 Um den Spannungsabfall über einen Widerstand zu ermitteln, kann die Formel des Spannungsteilers verwendet werden.
 
@@ -147,6 +149,8 @@ Durch einsetzen der gegebenen Werte ergibt sich nun ein Wert für $R_x$.
     \frac{10k\Omega V}{4V} \Rightarrow \\
     R_x = 2,5k\Omega
 \end{align}
+
+\newpage
 
 \subsubsection{Aufgabe 3}
 
@@ -246,6 +250,8 @@ Dieser Multiplikator wird in der Konstante \textit{RESOLUTION} gespeichert.
 Der verwendete Microkontroller konfiguriert analoge Pins standardmäßig als Input-Pins.
 Eine explizite Konfiguration als solche in der $setup()$ Funktion ist also nicht notwendig.
 
+\newpage
+
 \begin{lstlisting}[language=C,label={lst:a4-1-loop}, caption={Programmschleife der Aufgabe 4.1}]
 void loop()
 {
@@ -268,6 +274,8 @@ Durch die Überlegung aus (mal26) kann nun der Widerstand $R_2$, bzw. $R_x$, err
 
 Danach erfolgt die Ausgabe über der errechneten Größen über die serielle Schnittstelle.
 Ein Pausieren des Programms wird durchgeführt, um ein angenehmeres Lesen der Ausgabe zu ermöglichen.
+
+\newpage
 
 \begin{lstlisting}[language=C,label={lst:a4-1-programmcode}, caption={Vollständiger Programmcode der Aufgabe 4.1}]
 const int PIN_VOLTAGE = A0;
@@ -301,9 +309,9 @@ In dieser Aufgabe, soll die Kapazität eines Kondensators ermittelt werden.
 Es wurde die Schaltung aus Abbildung \ref{fig:implementierung-aufgabe-4-2} implementiert.
 Im Unterschied zur Schaltung aus Abbildung \ref{fig:a4-1-implemtierung}, wurde der unbekannte Widerstand durch einen Kondensator ersetzt, welcher eine unbekannte Kapazität besitzt.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{pictures/a4-2-pratik.png}
+    \includegraphics[width=0.9\textwidth]{pictures/a4-2-pratik.png}
     \caption{Implementierter Stromkreis von Aufgabe 4.2}
     \label{fig:implementierung-aufgabe-4-2}
 \end{figure}
@@ -315,6 +323,8 @@ Am Ende dieser Sektion befindet sich der vollständige Programmcode.
 \begin{lstlisting}[language=C,label={lst:a4-2-preprozessor-anweisung}, caption={Preprozessoranweisung}]
 #include <math.h>
 \end{lstlisting}
+
+\newpage
 
 In Listing \ref{lst:a4-2-preprozessor-anweisung} wurde eine Preprozessoranweisung verwendet.
 Diese fügt eine C-Bibliothek hinzu, die verschiedene mathematische Funktionen zur Verfügung stellt.
@@ -366,6 +376,8 @@ Letztere Bedingung wurde gewählt, da ansonsten eine Division durch $0$ möglich
 Erstere, da beim Testen des Programms festgestellt wurde, dass die errechnete Kapazität mit fortschreitender Zeit ungenauer, bzw.\ falsch wurde.
 Der in Listing \ref{lst:a4-2-programloop} verwendete Wert von $3,6V$ wurde verwendet, da dieser in der Ausgabe am Monitor den genauesten Wert zu liefern schien.
 
+\newpage
+
 \begin{lstlisting}[language=C,label={lst:a4-2-programmcode}, caption={Vollständiger Programmcode der Aufgabe 4.2}]
 #include <math.h>
 
@@ -414,9 +426,8 @@ Womöglich könnte mit dieser Einschränkung auch mit (33) ein gleich gutes Erge
     \label{fig:lade-entladekurve-kondensator}
 \end{figure}
 
+\newpage
+
 Des weiteren wurde der Wert von $3,6V$ für die Obergrenze von $u\_a$ durch experimentieren, d.h., willkürlich, festgelegt.
 Nachdem der Wert von $3,6$ nahe an $0,63U = 0,63*5V = 3,15V$ liegt, ist es naheliegend das ein weniger willkürlicher Wert $3,15V$ sein könnte.
 Dieser Wert ergibt sich aus der Spannung am Kondesator nach dem er $1\tau$ lang, siehe Abbildung \ref{fig:lade-entladekurve-kondensator}, geladen wurde.
-
-\subsection{Zusammenfassung}
-\label{subsec:a4-zusammenfassung2}

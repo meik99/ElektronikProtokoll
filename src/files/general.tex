@@ -15,7 +15,7 @@ In dieser Sektion werden alle Materialien im Allgemeinen gelistet und beschriebe
 \subsection{LED}
 \label{subsec:led}
 Eine Leuchtdiode (LED) ist ein Bauelement der Elektronik.
-Wird sie von elektrischen Strom durchflossen beginnt sie Licht auszustrahlen.
+Wird sie von elektrischem Strom durchflossen beginnt sie Licht auszustrahlen.
 Die Wellenlänge, d.h., die Farbe des Lichts sowie ob es für das menschliche Auge sichtbar ist oder nicht, hängt von den benutzten Materialien im inneren der LED ab.
 Die in der LED verwendeten Materialien sind für dieses Protokoll nicht weiter von Bedeutung.
 Für die beschriebenen Aufgaben wurden die folgenden LEDs verwendet.
@@ -28,12 +28,15 @@ Für die beschriebenen Aufgaben wurden die folgenden LEDs verwendet.
         \hline
         Farbe & Durchflussspannung & Maximalstrom \\
         \hline
+        Infrarot   & 1,2V - 1,8V        & 20mA         \\
         Rot   & 1,6V - 2,2V        & 20mA         \\
         Gelb  & 1,9V - 2,5V        & 20mA         \\
         Grün  & 1,9V - 2,5V        & 20mA         \\
         \hline
     \end{tabular}
 \end{table}
+
+\newpage
 
 \subsection{Widerstände}
 \label{subsec:widerstände}
@@ -50,7 +53,7 @@ Die verwendeten Widerstände sind Farbcodiert, um sie voneinander unterscheiden 
 Die Farbkodierung von Widerständen wird in den Aufgaben, in denen sie verwendet werden, angegeben.
 Die Bedeutung der Codierung der verwendeten Widerstände kann in Tab. \ref{tab:farbcodierung-von-widerständen} abgelesen werden.
 
-\begin{table}
+\begin{table}[h]
     \begin{adjustwidth}{-2cm}{}
         \caption{Farbcodierung von Widerständen}
         \label{tab:farbcodierung-von-widerständen}
@@ -60,8 +63,10 @@ Die Bedeutung der Codierung der verwendeten Widerstände kann in Tab. \ref{tab:f
             \hline
             Silber  & -                    & -                   & -                      & $\pm 10\%$        \\
             Gold    & -                    & -                   & $0.1$                  & $\pm 5\%$         \\
-            Braun   & 1                    & 0                   & $10$                   & $\pm 1\%$         \\
+            Schwarz & -                    & 0                   & $0.1$                  & $\pm 5\%$         \\
+            Braun   & 1                    & 0                   & $1$                    & -                 \\
             Rot     & 2                    & 2                   & $100$                  & $\pm 2\%$         \\
+            Orange  & 3                    & 3                   & $1000$                  & -                 \\
             Gelb    & 4                    & 4                   & $10\ 000$              & -                 \\
             Grün    & 5                    & 5                   & $100\ 000$             & $\pm 0.5\%$       \\
             Blau    & 6                    & 6                   & $1\ 000\ 000$          & $\pm 0.25\%$      \\
@@ -72,6 +77,8 @@ Die Bedeutung der Codierung der verwendeten Widerstände kann in Tab. \ref{tab:f
         \end{tabular}
     \end{adjustwidth}
 \end{table}
+
+\newpage
 
 \subsection{Mikrocontroller \cite{arduino-r3}}
 \label{subsec:mikrocontroller}
@@ -108,6 +115,8 @@ In Tabelle \ref{tab:bausteine-und-deren-logische-funktionen} sind die verwendete
         \hline
     \end{tabular}
 \end{table}
+
+\newpage
 
 \subsection{Kondensatoren \cite{kondesator}}
 \label{subsec:kondensatoren}
